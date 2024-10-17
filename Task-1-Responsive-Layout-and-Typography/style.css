@@ -1,0 +1,277 @@
+/*Imports the selected Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Protest+Guerrilla&display=swap');
+
+/*-----CSS RESET: resets default spacing values-----*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*-----VALUES TO BE USED STORED IN VARIABLES USING THE ROOT OF THE HTML-----*/
+:root {
+    --small-sp: 12px;
+    --large-sp: 20px;
+    --tablet-sp: 30px;
+    --desktop-sp: 50px;
+}
+
+body {
+    /* 1.5: A number value that will multiply by the element's font-size*/
+    line-height: 1.5;
+    background-color: #e9e9e9;
+}
+
+/* Sets images to block and width to 100% which takes up the whole container*/
+img {
+    /* Makes the image not stretch in the container but fill it properly
+    however some parts of the image may not be visible */
+    object-fit: cover;
+    display: block;
+    width: 100%;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-family: "Protest Guerrilla", sans-serif;
+}
+
+h1 {
+    font-size: 96px;
+}
+
+h2 {
+    font-size: 70px;
+    margin-block: var(--small-sp);
+}
+
+p {
+    /* Adds margin to top and bottom side*/
+    margin-block: var(--small-sp);
+    font-family: "Josefin Sans", sans-serif;
+}
+
+a {
+    /* Removes underline from the anchor tags */
+    text-decoration: none;
+    color: #14181d;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+ul {
+    /* Removes bullet points from the unordered list */
+    list-style-type: none;
+}
+
+/*-----HEADER & NAVIGATION-----*/
+header {
+    padding: var(--small-sp);
+    display: flex;
+    /* Centers the items vertically */
+    align-items: center;
+    /* Centers the items horizontally */
+    justify-content: center;
+    /* Sets the direction to column */
+    flex-direction: column;
+}
+
+#logo {
+    margin: var(--small-sp);
+    width: 80px;
+}
+
+nav {
+    margin: var(--small-sp);
+    /* Sets nav with width to 100% which takes up the whole container*/
+    width: 100%;
+}
+
+#nav-container {
+    display: flex;
+}
+
+#nav-container li {
+    width: 100%;
+    text-align: center;
+}
+
+/*------MAIN CONTENT-----*/
+
+/* Sets the padding to all section tags */
+section {
+    padding: var(--small-sp);
+    background-color: white;
+}
+
+/* Hero section */
+#hero p {
+    font-size: 24px;
+}
+
+/* Album gallery section */
+#album-gallery {
+    /* Reverts the padding to the initial value size */
+    padding: initial;
+}
+
+/* Author section */
+#author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#author-img {
+    /* Sets a constraint width of 200px and make the img circle*/
+    max-width: 200px;
+    border-radius: 100%;
+}
+
+/*-----FOOTER-----*/
+footer {
+    padding: var(--small-sp);
+    color: white;
+    background-color: #14181d;
+    text-align: center;
+}
+
+/* Styles for LARGE MOBILES */
+@media (min-width: 540px) {
+    #logo {
+        margin: var(--large-sp);
+    }
+
+    nav {
+        margin: var(--large-sp);
+    }
+
+    section {
+        padding: var(--large-sp);
+    }
+
+    footer {
+        padding: var(--large-sp);
+    }
+}
+
+/* Styles for TABLETS */
+@media (min-width: 720px) {
+    body {
+        /* Adds margin to left and right side*/
+        margin-inline: var(--tablet-sp);
+    }
+
+    #logo {
+        margin: var(--tablet-sp);
+    }
+
+    nav {
+        margin: var(--tablet-sp);
+    }
+
+    section {
+        padding: var(--tablet-sp);
+    }
+
+    footer {
+        padding: var(--tablet-sp);
+    }
+
+    /* Album gallery section */
+    #album-gallery {
+        display: grid;
+        /* Sets 2 equal columns and rows */
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    /* Don't display album covers that have this class */
+    .album-tablet {
+        display: none;
+    }
+
+    /* Author section */
+    #author {
+        flex-direction: row;
+    }
+
+    #author img {
+        /* Sets order to 1 so that it will be displayed on the right side */
+        order: 1;
+    }
+}
+
+/* Styles for DESKTOPS */
+@media (min-width: 1024px) {
+    body {
+        margin-inline: var(--desktop-sp);
+    }
+
+    h1,
+    h2 {
+        text-align: left;
+    }
+
+    #logo {
+        margin: var(--tablet-sp);
+        width: 200px;
+    }
+
+    nav {
+        margin: var(--desktop-sp);
+    }
+
+    section {
+        padding: var(--desktop-sp);
+    }
+
+    /* Content section */
+    #content {
+        /* Makes the section have 3 columns */
+        column-count: 3;
+        /* Sets the column gap */
+        column-gap: var(--desktop-sp);
+    }
+
+    /* Album gallery section */
+    #album-gallery {
+        display: grid;
+        /* Sets 4 columns */
+        grid-template-columns: repeat(4, 1fr);
+        /* Sets 2 columns */
+        grid-template-rows: 1fr 1fr;
+    }
+
+    /* Sets the album image to occupy 2 columns and rows 
+    and sets the order -1 meaning it will be displayed 
+    first on the left side*/
+    #album-desktop {
+        grid-column: span 2;
+        grid-row: span 2;
+        order: -1;
+    }
+
+    /* Displays the album cover that has this id */
+    #album-visible {
+        display: block;
+    }
+
+    /* Author section */
+    #author {
+        gap: var(--desktop-sp);
+    }
+
+    #author h2 {
+        text-align: center;
+    }
+
+    #author p {
+        /* Sets a constraint width of 600px*/
+        max-width: 600px;
+    }
+
+    footer {
+        padding: var(--desktop-sp);
+    }
+}
