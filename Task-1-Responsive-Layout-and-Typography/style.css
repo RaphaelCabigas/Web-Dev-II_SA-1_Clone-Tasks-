@@ -27,7 +27,7 @@ img {
     however some parts of the image may not be visible */
     object-fit: cover;
     display: block;
-    max-width: 100%;
+    width: 100%;
 }
 
 h1,
@@ -151,6 +151,7 @@ footer {
     }
 
     footer {
+        margin-inline: var(--large-sp);
         padding: var(--large-sp);
     }
 }
@@ -179,6 +180,7 @@ footer {
     }
 
     footer {
+        margin-inline: var(--tablet-sp);
         padding: var(--tablet-sp);
     }
 
@@ -218,7 +220,7 @@ footer {
     }
 
     #logo {
-        margin: var(--tablet-sp);
+        margin: var(--desktop-sp);
         width: 200px;
     }
 
@@ -280,6 +282,7 @@ footer {
     }
 
     footer {
+        margin-inline: var(--desktop-sp);
         padding: var(--desktop-sp);
     }
 }
