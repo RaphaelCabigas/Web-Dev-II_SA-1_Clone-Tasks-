@@ -1,0 +1,257 @@
+/*Imports the selected Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap');
+
+/*-----CSS RESET: resets default spacing values-----*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*-----VALUES TO BE USED STORED IN VARIABLES USING THE ROOT OF THE HTML-----*/
+:root {
+    --small-sp: 16px;
+    --t-large-sp: 32px;
+    --d-large-sp: 48px;
+}
+
+body {
+    /* 1.5: A number value that will multiply by the element's font-size*/
+    line-height: 1.5;
+    background-color: #070410;
+}
+
+/* Sets images to block and 
+width to 100% which takes up the whole container */
+img {
+    /* Makes the image not stretch in the container but fill it properly
+    although some parts of the image may not be visible */
+    object-fit: cover;
+    display: block;
+    width: 100%;
+}
+
+a {
+    font-family: "Lato", sans-serif;
+    /* Removes underline from the anchor tags */
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.5s ease;
+}
+
+h1 {
+    transition: color 0.5s ease;
+}
+
+/* H1 & Link hover transition */
+a:hover,
+h1:hover {
+    color: #eef36a;
+}
+
+ul {
+    /* Removes bullet points from the unordered list */
+    list-style-type: none;
+}
+
+button {
+    padding: var(--small-sp);
+    /* Rounds the corners of the button */
+    border-radius: 10px;
+    /* Removes the border */
+    border: none;
+    color: #14181d;
+    background-color: #eef36a;
+    /* Displays all the letter in uppercase */
+    text-transform: uppercase;
+    font-family: "Teko", sans-serif;
+    /* 2em: Will multiply the font-size based on the parent element 
+    which will be the body's font-size typically 16px */
+    font-size: 2em;
+    cursor: pointer;
+    /* Sets the button to position relative 
+    allowing the before pseudo selector to be position 
+    based on the button's location*/
+    position: relative;
+    /* overflow set to hidden to hide the overflowing content of the
+    pseudo selector before of the button*/
+    overflow: hidden;
+    transition: color 0.5s ease;
+}
+
+/* Moves the span element in front of the buttons' before pseudo selector*/
+button span {
+    position: relative;
+}
+
+/* Button hover changes text color */
+button:hover {
+    color: #eef36a;
+}
+
+/* Button's before pseudo selector*/
+button::before {
+    /* Returns the selector with an empty string*/
+    content: "";
+    /* Absolute position to the button's relative position */
+    position: absolute;
+    /* position the selector at the bottom of the button 
+    and strecth it to both sides of the button left and right*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* Automatically centers the selector*/
+    margin-inline: auto;
+    /* Set width and height to 0 for transition */
+    width: 0%;
+    height: 0%;
+    border-radius: 100%;
+    background-color: #070410;
+    transition: width 0.5s ease, height 0.5s ease, border-radius 0.7s ease;
+}
+
+/* Hover Button's before pseudo selector transition*/
+button:hover::before {
+    border-radius: 0%;
+    /* Change the width and height to 100% of the button*/
+    width: 100%;
+    height: 100%;
+}
+
+h1,
+h2 {
+    font-family: "Teko", sans-serif;
+    color: #ffffff;
+}
+
+p {
+    font-family: "Lato", sans-serif;
+    color: #ffffff;
+}
+
+header {
+    display: flex;
+    /* Centers the items vertically */
+    align-items: center;
+    /* Have equal spacing between items not including the edges */
+    justify-content: space-between;
+    background-color: #231651;
+    padding: var(--small-sp);
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+nav {
+    /* Don't display the navigation */
+    display: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    /* Sets a constraint width of 900px */
+    max-width: 900px;
+    display: grid;
+    gap: var(--small-sp);
+}
+
+.movie-box {
+    font-size: 1.5em;
+    display: grid;
+    /* Adds 1 row that automatically sizes based on the content within
+    and another that will take up the remaining space */
+    grid-template-rows: auto 1fr;
+    background-color: #231651;
+}
+
+.movie-content {
+    padding: var(--small-sp);
+    gap: var(--small-sp);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.movie-content button {
+    /* Adds a shadow inside the button horizontally center 0px, 
+    moving upward -30px, and blur by 80px */
+    box-shadow: inset 0px -30px 80px #eef36a;
+    background-color: #4DCCBD;
+}
+
+/* Adds a box shadow inside the movie box's buttons pseudo selector */
+.movie-box button::before {
+    box-shadow: inset 0 0 20px #4DCCBD;
+}
+
+/* Styles for TABLETS */
+@media (min-width: 720px) {
+    header {
+        box-shadow: 0px 10px 50px #4DCCBD;
+    }
+
+    header h1 {
+        font-size: 3em;
+    }
+
+    nav {
+        /* Displays the navigation */
+        display: block;
+        font-size: 1.2em;
+    }
+
+    #nav-container {
+        gap: var(--t-large-sp);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    section {
+        margin: var(--t-large-sp);
+        gap: var(--t-large-sp);
+        /* Sets 2 equal columns */
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .movie-box {
+        box-shadow: 0px 10px 15px #4DCCBD;
+    }
+}
+
+/* Styles for DESKTOPS */
+@media (min-width: 1024px) {
+    #nav-container {
+        gap: var(--d-large-sp);
+    }
+
+    section {
+        margin: var(--d-large-sp);
+        gap: var(--d-large-sp);
+    }
+
+    /* Sets the big movie box to occupy 2 columns */
+    #big-box {
+        grid-column: span 2;
+    }
+
+    /* Sets the big movie box image to have a height of 400px */
+    #big-box div img {
+        height: 400px;
+    }
+
+    #big-box .movie-content {
+        display: grid;
+        grid-template-columns: 1.8fr 1fr;
+    }
+
+    /* Movie Boxes in Rows */
+    .movie-rows {
+        /* Sets 2 equal columns */
+        grid-template-columns: 1fr 1fr;
+        grid-column: span 2;
+    }
+}
