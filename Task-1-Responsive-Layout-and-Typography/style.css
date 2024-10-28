@@ -5,6 +5,8 @@
 * {
     margin: 0;
     padding: 0;
+    /* Width and height takes account of border and padding spacing*/
+    box-sizing: border-box;
 }
 
 /*-----VALUES TO BE USED STORED IN VARIABLES USING THE ROOT OF THE HTML-----*/
