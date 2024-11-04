@@ -85,22 +85,19 @@ button {
     allowing the before pseudo selector to be position 
     based on the button's location */
     position: relative;
+    /* position the text in front of the before pseudo element */
+    z-index: 0;
     /* overflow set to hidden to hide the overflowing content of the
     pseudo selector before of the button */
     overflow: hidden;
     transition: color 0.5s ease;
-
-    span {
-        /* Moves the span element in front of the buttons' before pseudo selector */
-        position: relative;
-    }
 
     &:hover {
         /* Button hover changes text color */
         color: $color-2;
 
         &::before {
-            /* Button's before pseudo selector */
+            /* Hover Button's before pseudo selector transition */
 
             border-radius: 0%;
             width: 100%;
@@ -109,14 +106,16 @@ button {
     }
 
     &::before {
-        /* Hover Button's before pseudo selector transition*/
-        /* Returns the selector with an empty string*/
+        /* Button's before pseudo selector */
+        /* Returns the selector with an empty string */
         content: "";
         /* Absolute position to the button's relative position */
         position: absolute;
+        /* position the before pseudo element behind the text */
+        z-index: -1;
         /* position the selector at the bottom of the button 
         an move it by 50% to the left which is the anchor point
-        and adjust it back by -50%*/
+        and adjust it back by -50% */
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
