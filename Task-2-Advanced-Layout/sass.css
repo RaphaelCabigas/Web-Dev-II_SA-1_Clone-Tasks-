@@ -1,0 +1,242 @@
+/*-----VALUES TO BE USED STORED IN VARIABLES-----*/
+/* Imports the selected Google Fonts */
+@import "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap";
+* {
+  /*-----CSS RESET: resets default spacing values-----*/
+  margin: 0;
+  padding: 0;
+  /* Width and height takes account of border and padding spacing*/
+  box-sizing: border-box;
+}
+
+body {
+  /* 1.5: A number value that will multiply by the element's font-size */
+  line-height: 1.5;
+  background-color: #070410;
+}
+
+/* Sets images to block and 
+width to 100% which takes up the whole container */
+img {
+  /* Makes the image not stretch in the container but fill it properly
+  although some parts of the image may not be visible */
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  width: 100%;
+}
+
+a {
+  /* H1 & Link hover transition */
+  font-family: "Lato", sans-serif;
+  /* Removes underline from the anchor tags */
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.5s ease;
+}
+a:hover {
+  /* & or the parent selector is used to style the pseudo selectors */
+  color: #eef36a;
+}
+
+h1 {
+  transition: color 0.5s ease;
+  font-family: "Teko", sans-serif;
+  color: #ffffff;
+}
+h1:hover {
+  color: #eef36a;
+}
+
+ul {
+  /* Removes bullet points from the unordered list */
+  list-style-type: none;
+}
+
+button {
+  padding: 16px;
+  /* Rounds the corners of the button */
+  border-radius: 10px;
+  /* Removes the border */
+  border: none;
+  color: #070410;
+  background-color: #eef36a;
+  /* Displays all the letter in uppercase */
+  text-transform: uppercase;
+  font-family: "Teko", sans-serif;
+  /* 2em: Will multiply the font-size based on the parent element 
+  which will be the body's font-size typically 16px */
+  font-size: 2em;
+  cursor: pointer;
+  /* Sets the button to position relative 
+  allowing the before pseudo selector to be position 
+  based on the button's location */
+  position: relative;
+  /* overflow set to hidden to hide the overflowing content of the
+  pseudo selector before of the button */
+  overflow: hidden;
+  transition: color 0.5s ease;
+}
+button span {
+  /* Moves the span element in front of the buttons' before pseudo selector */
+  position: relative;
+}
+button:hover {
+  /* Button hover changes text color */
+  color: #eef36a;
+}
+button:hover::before {
+  /* Button's before pseudo selector */
+  border-radius: 0%;
+  width: 100%;
+  height: 100%;
+}
+button::before {
+  /* Hover Button's before pseudo selector transition*/
+  /* Returns the selector with an empty string*/
+  content: "";
+  /* Absolute position to the button's relative position */
+  position: absolute;
+  /* position the selector at the bottom of the button 
+  an move it by 50% to the left which is the anchor point
+  and adjust it back by -50%*/
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  /* Set width and height to 0 for transition */
+  width: 0%;
+  height: 0%;
+  border-radius: 100%;
+  background-color: #070410;
+  transition: width 0.5s ease, height 0.5s ease, border-radius 0.7s ease;
+}
+
+h2 {
+  font-family: "Teko", sans-serif;
+  color: #ffffff;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  color: #ffffff;
+}
+
+header {
+  display: flex;
+  /* Centers the items vertically */
+  align-items: center;
+  /* Have equal spacing between items not including the edges */
+  justify-content: space-between;
+  background-color: #231651;
+  padding: 16px;
+}
+header h1 {
+  font-size: 2em;
+}
+
+nav {
+  /* Don't display the navigation */
+  display: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  /* Sets a constraint width of 900px */
+  max-width: 900px;
+  display: grid;
+  gap: 16px;
+}
+
+.movie-box {
+  font-size: 1.5em;
+  display: grid;
+  /* Adds 1 row that automatically sizes based on the content within
+  and another that will take up the remaining space */
+  grid-template-rows: auto 1fr;
+  background-color: #231651;
+  /* Adds a box shadow inside the movie box's buttons pseudo selector */
+}
+.movie-box button::before {
+  box-shadow: inset 0 0 20px #4DCCBD;
+}
+
+.movie-content {
+  padding: 16px;
+  gap: 16px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.movie-content button {
+  /* Adds a shadow inside the button horizontally center 0px, 
+  moving upward -30px, and blur by 80px */
+  box-shadow: inset 0px -30px 80px #eef36a;
+  background-color: #4DCCBD;
+}
+
+@media (min-width: 720px) {
+  /* Styles for TABLETS */
+  header {
+    box-shadow: 0px 10px 50px #4DCCBD;
+  }
+  header h1 {
+    font-size: 3em;
+  }
+  nav {
+    /* Displays the navigation */
+    display: block;
+    font-size: 1.2em;
+  }
+  #nav-container {
+    gap: 32px;
+    display: flex;
+    justify-content: space-between;
+  }
+  section {
+    margin: 32px;
+    gap: 32px;
+    /* Sets 2 equal columns */
+    grid-template-columns: 1fr 1fr;
+  }
+  .movie-box {
+    box-shadow: 0px 10px 15px #4DCCBD;
+  }
+}
+@media (min-width: 1024px) {
+  /* Styles for DESKTOPS */
+  #nav-container {
+    gap: 48px;
+  }
+  section {
+    margin: 48px;
+    gap: 48px;
+  }
+  #big-box {
+    /* Sets the big movie box to occupy 2 columns */
+    grid-column: span 2;
+  }
+  #big-box img {
+    /* Sets the big movie box image to have a height of 400px */
+    height: 400px;
+  }
+  #big-box .movie-content {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+  }
+  #big-box button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 120%;
+  }
+  .movie-rows {
+    /* Movie Boxes in Rows */
+    grid-template-columns: 1fr 1fr;
+    grid-column: span 2;
+  }
+}/*# sourceMappingURL=sass.css.map */
