@@ -50,8 +50,7 @@ h2 {
 }
 
 p {
-    /* Adds margin to top and bottom side*/
-    margin-block: var(--small-sp);
+    margin-top: var(--small-sp);
     font-family: "Josefin Sans", sans-serif;
 }
 
@@ -237,6 +236,10 @@ footer {
 
     h1 span:last-child {
         font-size: 50px;
+    }
+
+    #hero p {
+        width: 700px;
     }
 
     #logo {
