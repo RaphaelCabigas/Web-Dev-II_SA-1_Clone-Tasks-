@@ -1,3 +1,5 @@
+/* ORIGINAL CSS WITHOUT SASS */
+
 /*Imports the selected Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Protest+Guerrilla&display=swap');
 
@@ -138,8 +140,9 @@ footer {
     text-align: center;
 }
 
-/* Styles for LARGE MOBILES */
 @media (min-width: 540px) {
+
+    /* Styles for LARGE MOBILES */
     #logo {
         margin: var(--large-sp);
     }
@@ -153,13 +156,13 @@ footer {
     }
 
     footer {
-        margin-inline: var(--large-sp);
         padding: var(--large-sp);
     }
 }
 
-/* Styles for TABLETS */
 @media (min-width: 720px) {
+
+    /* Styles for TABLETS */
     body {
         /* Adds margin to left and right side*/
         margin-inline: var(--tablet-sp);
@@ -210,8 +213,9 @@ footer {
     }
 }
 
-/* Styles for DESKTOPS */
 @media (min-width: 1024px) {
+
+    /* Styles for DESKTOPS */
     body {
         margin-inline: var(--desktop-sp);
     }
