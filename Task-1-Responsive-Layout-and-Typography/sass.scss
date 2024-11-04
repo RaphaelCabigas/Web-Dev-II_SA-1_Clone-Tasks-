@@ -49,8 +49,7 @@ h2 {
 }
 
 p {
-    /* Adds margin to top and bottom side*/
-    margin-block: $small-sp;
+    margin-top: $small-sp;
     font-family: $font-2;
 }
 
@@ -239,6 +238,12 @@ footer {
 
     h2 {
         text-align: left;
+    }
+
+    #hero {
+        p {
+            width: 700px;
+        }
     }
 
     #logo {
