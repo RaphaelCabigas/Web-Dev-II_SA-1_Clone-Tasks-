@@ -150,12 +150,6 @@ footer {
         margin: $large-sp;
     }
 
-    h1 {
-        /* Make the flex direction to a column */
-        display: flex;
-        flex-direction: column;
-    }
-
     section {
         padding: $large-sp;
     }
@@ -226,14 +220,7 @@ footer {
 
     h1 {
         text-align: left;
-
-        span:first-child {
-            font-size: 120px;
-        }
-
-        span:last-child {
-            font-size: 50px;
-        }
+        font-size: 120px;
     }
 
     h2 {
@@ -243,6 +230,10 @@ footer {
     #hero {
         p {
             width: 700px;
+        }
+
+        h2 {
+            font-size: 3rem;
         }
     }
 
