@@ -227,7 +227,7 @@ footer {
     display: grid;
     /* Sets 4 columns */
     grid-template-columns: repeat(4, 1fr);
-    /* Sets 2 columns */
+    /* Sets 2 rows */
     grid-template-rows: 1fr 1fr;
   }
   #album-desktop {
