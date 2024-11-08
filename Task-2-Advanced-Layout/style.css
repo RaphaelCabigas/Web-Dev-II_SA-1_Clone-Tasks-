@@ -245,6 +245,7 @@ section {
 
     #big-box .movie-content {
         display: grid;
+        /* Sets a first big column and one small column */
         grid-template-columns: 1.8fr 1fr;
     }
 
@@ -253,6 +254,8 @@ section {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        /* Gets inherited by the spans inside the button 
+        which adjusts the vertical spacing between spans*/
         line-height: 120%;
     }
 
