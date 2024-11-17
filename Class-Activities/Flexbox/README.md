@@ -18,6 +18,10 @@ Create a quiz layout where questions are displayed in a column and answer choice
 ### 5. To-do List
 Create a simple to-do list application where the tasks are displayed using Flexbox. Each task should have a checkbox, a label, and a delete button, arranged in a flexible layout.
 
-## Demo 
+## Flexbox Showcase 
 
-![Flexbox Tasks Demo](link)
+![Flexbox Tasks Demo](./assets/images/flexbox.gif)
+
+## Website Resources &copy;
+* Images: Pexels, Visual Electric, Lummi.ai, DeepAi.org
+* Fluid Typography: UTOPIA
