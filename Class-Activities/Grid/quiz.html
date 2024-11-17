@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Quiz</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/quiz.css">
+</head>
+
+<body>
+    <header>
+        <div class="question-number">
+            <p>1 out of 10</p>
+        </div>
+        <a href="index.html">Home</a>
+    </header>
+    <button class="next-btn">Next</button>
+    <main>
+        <!-----START SECTION----->
+        <section class="starting-ctr">
+            <h1>Grid Quiz</h1>
+            <p>made by raphael cabigas</p>
+            <p>Can you answer 10 questions about grid?</p>
+            <button class="screen-btn">Start</button>
+        </section>
+        <!-----SCORE SECTION----->
+        <section class="score-ctr">
+            <h2>YOUR SCORE IS</h2>
+            <p>0 out of 5</p>
+            <button class="screen-btn">Again?</button>
+        </section>
+        <!-----QUIZ SECTION----->
+        <article class="question">
+            <h2></h2>
+            <ul class="choices-ctr">
+                <li>
+                    <button class="choice"></button>
+                </li>
+                <li>
+                    <button class="choice"></button>
+                </li>
+                <li>
+                    <button class="choice"></button>
+                </li>
+                <li>
+                    <button class="choice"></button>
+                </li>
+            </ul>
+        </article>
+    </main>
+</body>
+<!-- type module is used so that imports and exports can be used -->
+<script type="module" src="./scripts/quiz.js"></script>
+
+</html>
