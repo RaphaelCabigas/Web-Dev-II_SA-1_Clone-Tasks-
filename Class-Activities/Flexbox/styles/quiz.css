@@ -1,0 +1,213 @@
+button {
+    font-size: 1rem;
+    font-family: "Subjectivity", sans-serif;
+}
+
+a {
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    border-radius: 0 0 0 15px;
+    background-color: var(--darkgray);
+    color: var(--lightgray);
+}
+
+section {
+    z-index: 999;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.screen-btn {
+    padding: 30px;
+    border-radius: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+/*-----START SCREEN-----*/
+.starting-ctr {
+    color: var(--lightgray);
+    background-color: var(--darkbluegreen);
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.starting-ctr p:first-of-type {
+    position: absolute;
+    bottom: 30px;
+}
+
+/*--START HEADING--*/
+.starting-ctr h1 {
+    text-align: center;
+    -webkit-text-stroke: 3px var(--darkgray);
+    font-size: clamp(3rem, 1rem + 10vw, 10rem);
+}
+
+/*--START BUTTON--*/
+.starting-ctr button {
+    color: var(--lightgray);
+    background-color: var(--darkgray);
+}
+
+/*--SCORE SCREEN--*/
+.score-ctr {
+    opacity: 0;
+    visibility: hidden;
+    color: var(--lightgray);
+    background-color: var(--darkgray);
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+/*--NEXT QUESTION BUTTON--*/
+.next-btn {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 25px;
+    border-radius: 15px;
+    color: var(--lightgray);
+    background-color: var(--darkgray);
+    font-weight: 700;
+    font-family: "Subjectivity", sans-serif;
+    text-transform: uppercase;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/*--SCORE OPEN JS--*/
+.score-ctr.open,
+.next-btn.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*--SCORE HEADING--*/
+.score-ctr h2 {
+    margin: 0;
+}
+
+/*--SCORE--*/
+.score-ctr p {
+    font-size: 3rem;
+}
+
+/*--SCORE BUTTON--*/
+.score-ctr button {
+    color: var(--lightgray);
+    background-color: var(--darkbluegreen);
+}
+
+/*--START & SCORE CLOSE JS--*/
+.starting-ctr.close,
+.score-ctr.close {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*--QUESTION COUNTER--*/
+.question-number {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+}
+
+/*--COUNTER TEXT--*/
+.question-number p {
+    padding: 5px;
+    border-radius: 0 0 15px 15px;
+    color: var(--lightgray);
+    background-color: var(--darkgray);
+}
+
+/*----QUESTION CONTAINER-----*/
+.question {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px 20px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/*--QUESTION CLOSE JS--*/
+.question.close {
+    transform: scale(0.5) translateY(-30%) rotateZ(-30deg);
+    opacity: 0;
+}
+
+/*--QUIZ QUESTION--*/
+.question h2 {
+    font-size: clamp(1.2rem, 1rem + 5vw, 2rem);
+    text-transform: none;
+}
+
+/*--CHOICES CONTAINER--*/
+.choices-ctr {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*--CHOICE MINI CONTAINER--*/
+.choices-ctr li {
+    flex: 1;
+}
+
+/*--CHOICE BUTTON--*/
+.choice {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    color: var(--lightgray);
+    background-color: var(--darkbluegreen);
+    text-align: left;
+    font-family: 'LTInstitute', sans-serif;
+    transition: background-color 0.3s ease, transform 0.5s ease;
+}
+
+/*--ENABLED CHOICE HOVER--*/
+.choice:enabled:hover {
+    background-color: #425c53;
+}
+
+/*--CORRECT DESCRIPTION--*/
+.desc {
+    text-align: left;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease, margin-top 0.5s ease;
+}
+
+/*--CORRECT DESCRIPTION JS--*/
+.desc.open {
+    margin-top: 40px;
+    max-height: 150px;
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (min-width: 720px) {
+    .question {
+        padding-inline: 30px;
+    }
+
+    /*-----FLEXBOX QUIZ SECTION-----*/
+    .choices-ctr {
+        flex-direction: row;
+    }
+}
