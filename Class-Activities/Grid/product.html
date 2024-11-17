@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="./styles/product.css">
+</head>
+
+<body>
+    <!--Mobile Menu-->
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <!-- Header/Navigation -->
+        <a href="#" class="logo">BENTO</a>
+        <!-- Header/Navigation -->
+        <nav>
+            <ul class="navigation">
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Delivery</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="nav-actions">
+                <li><!--PROFILE BUTTON-->
+                    <button class="profile-btn">
+                        <svg width="100" height="100" viewBox="0 0 100 100" fill="#FFD43B"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M95 25C95 13.9543 86.0457 5 75 5H25C13.9543 5 5 13.9543 5 25V75C5 86.0457 13.9543 95 25 95H75C86.0457 95 95 86.0457 95 75V25ZM35.1765 53.7059C38.3927 53.7059 41 51.0986 41 47.8824C41 44.6661 38.3927 42.0588 35.1765 42.0588C31.9602 42.0588 29.353 44.6661 29.353 47.8824C29.353 51.0986 31.9602 53.7059 35.1765 53.7059ZM69.5882 47.8824C69.5882 51.0986 66.9809 53.7059 63.7647 53.7059C60.5484 53.7059 57.9411 51.0986 57.9411 47.8824C57.9411 44.6661 60.5484 42.0588 63.7647 42.0588C66.9809 42.0588 69.5882 44.6661 69.5882 47.8824ZM50.9992 64.1161C49.9876 64.2757 48.9536 64.2759 47.9421 64.1157C44.9219 63.6374 42.8772 62.5338 41.144 61.5982C39.5936 60.7612 38.2923 60.0588 36.7648 60.0588C33.2561 60.0588 30.4118 62.9031 30.4118 66.4118C30.4118 69.6828 34.5531 73.2968 41.5488 75.4871C42.5855 75.8118 43.6607 75.9986 44.7433 76.0893C44.9858 76.1096 45.224 76.1287 45.4579 76.1465C46.5187 76.3026 47.8758 76.3759 49.5832 76.3497C51.372 76.3768 52.7785 76.2974 53.8639 76.13C54.0237 76.1172 54.1856 76.1039 54.3494 76.09C55.4224 75.999 56.4877 75.8128 57.5155 75.4915C64.5196 73.3015 68.6663 69.685 68.6663 66.4118C68.6663 62.9031 65.822 60.0588 62.3134 60.0588C60.7845 60.0588 59.4563 60.7625 57.8747 61.6004C56.1092 62.5358 54.0279 63.6384 50.9992 64.1161Z" />
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <!--BAG BUTTON-->
+                    <button class="bag-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35"
+                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#FFD43B"
+                                d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z" />
+                        </svg>
+                </li>
+                <li>
+                    <!--MENU BUTTON-->
+                    <button class="menu-btn">
+                        <svg width="100" height="100" viewBox="0 0 100 100" fill="#FFD43B"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5 74.6865C5 72.3493 6.89472 70.4545 9.23198 70.4545H90.768C93.1053 70.4545 95 72.3493 95 74.6865V74.6865C95 85.9053 85.9053 95 74.6865 95H25.3135C14.0947 95 5 85.9053 5 74.6865V74.6865Z" />
+                            <rect x="5" y="37.7273" width="90" height="24.5455" rx="2" />
+                            <path
+                                d="M5 25.3135C5 14.0947 14.0947 5 25.3135 5H74.6865C85.9053 5 95 14.0947 95 25.3135V25.3135C95 27.6507 93.1053 29.5455 90.768 29.5455H9.23198C6.89472 29.5455 5 27.6507 5 25.3135V25.3135Z" />
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="img-ctr">
+            <div class="img-wrap">
+                <img src="./assets/images/bento.jpg" alt="Bento">
+                <h2>CHICKEN BENTO</h2>
+                <button>+</button>
+            </div>
+            <div class="img-move">
+                <button class="left">L</button>
+                <button class="right">R</button>
+            </div>
+        </section>
+        <section class="details-ctr">
+            <h3>35.00 AED</h3>
+        </section>
+        <section class="desc-ctr">
+            <p>Featuring a tender marinated chicken and tofu complemented by a mix of seasonal vegetables. This meal
+                includes a sesame oil-seasoned jasmine rice which creates a delightful balance of flavors and textures.
+            </p>
+        </section>
+    </main>
+
+</body>
+<script src="./scripts/product.js"></script>
+
+</html>
