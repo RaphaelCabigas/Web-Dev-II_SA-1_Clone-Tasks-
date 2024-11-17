@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body>
+    <!--MENU BUTTON-->
+    <button class="menu-btn">
+        <span class="menu-txt">
+            <span>menu</span>
+            <span>close</span>
+        </span>
+    </button>
+    <!-----MENU----->
+    <nav class="menu">
+        <ul>
+            <li><a href="#card-design">Card Design</a></li>
+            <li><a href="#image-gallery">Image Gallery</a></li>
+            <li><a href="quiz.html">Flexbox Quiz</a></li>
+            <li><a href="todolist.html">To Do List</a></li>
+        </ul>
+    </nav>
+    <!-----HEADER----->
+    <header>
+        <!-----NAVIGATION----->
+        <nav class="nav-ctr">
+            <!--NAVIGATION LINKS-->
+            <ul>
+                <li><a href="#card-design">Card Design</a></li>
+                <li><a href="#image-gallery">Image Gallery</a></li>
+                <li><a href="quiz.html">Flexbox Quiz</a></li>
+                <li><a href="todolist.html">To Do List</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-----HERO----->
+        <section class="hero">
+            <h1><span>Flex</span><span>box</span></h1>
+            <p>Showcasing a bunch of web development tasks that uses flexbox layouts such as cards, a gallery, flexbox
+                questions, and using a bit of javascript for a functional to-do list.
+            </p>
+        </section>
+        <!-----CARD DESIGN----->
+        <section id="card-design">
+            <h2>Card Design</h2>
+            <!-----CARD CONTAINER----->
+            <div class="card-design-ctr">
+                <a href="https://www.pexels.com/photo/close-up-photo-of-a-cute-dog-7483187/" class="card-ctr">
+                    <div class="card-img-ctr">
+                        <!--loading attribute set to lazy so that it will only load when it reaches the user's viewport screen allowing the page to load faster-->
+                        <!--I haven't really seen the difference yet cuz it only runs locally so yeah-->
+                        <img loading="lazy" src="./assets/images/card-1.jpg" alt="A close up of a cute dog smiling">
+                    </div>
+                    <!-----CARD CONTENT----->
+                    <article class="card-desc">
+                        <div>
+                            <h3>Edgar</h3>
+                            <p>Linda Rusinko</p>
+                        </div>
+                        <button>view</button>
+                    </article>
+                </a>
+                <a href="https://www.pexels.com/photo/happy-labrador-retriever-in-jendouba-tunisia-28683175/"
+                    class="card-ctr">
+                    <div class="card-img-ctr">
+                        <img loading="lazy" src="./assets/images/card-2.jpg"
+                            alt="A Happy Labrador Retriever in Jendouba Tunisia">
+                    </div>
+                    <article class="card-desc">
+                        <div>
+                            <h3>Rudolph</h3>
+                            <p>Mahmoud Yahyaoui</p>
+                        </div>
+                        <button>view</button>
+                    </article>
+                </a>
+                <a href="https://www.pexels.com/photo/joyful-brown-siberian-husky-outdoors-portrait-29112297/"
+                    class="card-ctr">
+                    <div class="card-img-ctr">
+                        <img loading="lazy" src="./assets/images/card-3.jpg"
+                            alt="A Joyful Brown Siberian Husky Outdoors Portrait">
+                    </div>
+                    <article class="card-desc">
+                        <div>
+                            <h3>Bongo</h3>
+                            <p>A.J. Groomes</p>
+                        </div>
+                        <button>view</button>
+                    </article>
+                </a>
+            </div>
+        </section>
+        <!-----IMAGE GALLERY----->
+        <section id="image-gallery">
+            <h2>Image Gallery</h2>
+            <!-----GALLERY CONTAINER----->
+            <div class="gallery-ctr">
+                <!-----IMAGE CONTAINER----->
+                <a class="figure-ctr" href="https://www.pexels.com/photo/kuwait-water-towers-20145180/">
+                    <figure>
+                        <div class="figure-img-ctr">
+                            <img loading="lazy" src="./assets/images/gall-1.jpg" alt="Kuwait Water Towers">
+                        </div>
+                        <!-----IMAGE KEYWORDS----->
+                        <figcaption class="keyword-ctr">
+                            <span class="keyword">February 2024</span>
+                            <span class="keyword">Elliot Fais</span>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a class="figure-ctr"
+                    href="https://www.pexels.com/photo/low-angle-photography-of-gray-spiral-building-3172740/">
+                    <figure>
+                        <div class="figure-img-ctr">
+                            <img loading="lazy" src="./assets/images/gall-2.jpg"
+                                alt="A Low Angle Photography of Gray Spiral Building">
+                        </div>
+                        <figcaption class="keyword-ctr">
+                            <span class="keyword">November 2019</span>
+                            <span class="keyword">李进</span>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a class="figure-ctr" href="https://www.pexels.com/photo/a-room-with-lights-12089403/">
+                    <figure>
+                        <div class="figure-img-ctr">
+                            <img loading="lazy" src="./assets/images/gall-3.jpg" alt="A Room with Square Lights">
+                        </div>
+                        <figcaption class="keyword-ctr">
+                            <span class="keyword">May 2022</span>
+                            <span class="keyword">Yusuf P</span>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a class="figure-ctr"
+                    href="https://www.pexels.com/photo/futuristic-modern-building-with-unusual-details-5374862/">
+                    <figure>
+                        <div class="figure-img-ctr">
+                            <img loading="lazy" src="./assets/images/gall-4.jpg"
+                                alt="A Futuristic Modern Building with Unusual Details">
+                        </div>
+                        <figcaption class="keyword-ctr">
+                            <span class="keyword">September 2020</span>
+                            <span class="keyword">Lucky</span>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a class="figure-ctr"
+                    href="https://www.pexels.com/photo/picturesque-scenery-of-blooming-sakura-growing-near-tall-broadcasting-tower-under-blue-sky-7161190/">
+                    <figure>
+                        <div class="figure-img-ctr">
+                            <img loading="lazy" src="./assets/images/gall-5.jpg"
+                                alt="Picturesque Scenery of Blooming Sakura Growing near Tall Broadcasting Tower under Blue Sky">
+                        </div>
+                        <figcaption class="keyword-ctr">
+                            <span class="keyword">March 2021</span>
+                            <span class="keyword">Wencheng Jiang</span>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+        </section>
+        <!-----EXTRA----->
+        <section id="extra">
+            <a href="quiz.html"><img class="extra-img" src="./assets/images/flexboxquiz.jpg" alt="Flexbox Quiz">
+                <span>Flexbox Quiz</span></a>
+            <a href="todolist.html"><img class="extra-img" src="./assets/images/todolist.jpg" alt="Todolist">
+                <span>To-do List</span></a>
+        </section>
+    </main>
+    <!-----FOOTER----->
+    <footer>
+        <!-----COPYRIGHT----->
+        <p class="copyright">&copy; 2024 made & designed by Raphael Cabigas</p>
+        <!-----GO UP TAG----->
+        <a href="#">GO UP</a>
+    </footer>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
