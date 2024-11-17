@@ -1,0 +1,1399 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,100..900,0..100,0..1;1,9..144,100..900,0..100,0..1&family=Lexend:wght@100..900&display=swap');
+
+/*-----CSS RESET: resets default spacing values-----*/
+* {
+    margin: 0;
+    padding: 0;
+    /* Width and height takes account of border and padding spacing*/
+    box-sizing: border-box;
+}
+
+/*-----VALUES TO BE USED STORED IN VARIABLES USING THE ROOT OF THE HTML-----*/
+:root {
+    --brown: #3B3030;
+    --beige: #FFF0D1;
+    --darkbrown: #261c1c;
+}
+
+/* Styles scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--beige);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--darkbrown);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--beige);
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+a {
+    color: var(--beige);
+    font-family: 'Fraunces', serif;
+    display: block;
+    text-decoration: none;
+}
+
+svg {
+    width: 30px;
+    height: 30px;
+}
+
+ol,
+ul {
+    list-style-type: none;
+}
+
+button {
+    font-family: 'Fraunces', serif;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+input,
+label {
+    font-family: "Lexend", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    font-family: "Fraunces", serif;
+}
+
+h1 {
+    font-variation-settings:
+        "SOFT" 100,
+        "WONK" 1;
+    font-weight: 900;
+    /* @link https://utopia.fyi/clamp/calculator?a=320,1440,35-100 */
+    font-size: clamp(2.1875rem, 1.0268rem + 5.8036vw, 6.25rem);
+}
+
+h2 {
+    font-variation-settings:
+        "SOFT" 100,
+        "WONK" 1;
+    /* @link https://utopia.fyi/clamp/calculator?a=320,1440,32-90 */
+    font-size: clamp(2rem, 0.9643rem + 5.1786vw, 5.625rem);
+}
+
+h3 {
+    /* @link https://utopia.fyi/clamp/calculator?a=320,1440,20-56 */
+    font-size: clamp(1.25rem, 0.6071rem + 3.2143vw, 3.5rem);
+}
+
+p {
+    line-height: 1.5;
+    text-wrap: balance;
+    font-family: 'Lexend', sans-serif;
+}
+
+/*--TARGET PARGRAPHS IN MAIN CONTENT--*/
+main p {
+    text-wrap: pretty;
+    /* @link https://utopia.fyi/clamp/calculator?a=320,1440,16—20 */
+    font-size: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
+}
+
+/*-----HEADER-----*/
+header {
+    pointer-events: none;
+    width: 88%;
+    margin-inline: auto;
+    position: fixed;
+    top: 20px;
+    inset-inline: 0;
+    z-index: 999;
+}
+
+header a,
+header ul {
+    pointer-events: auto;
+}
+
+nav {
+    display: grid;
+}
+
+/*--NAV CONTAINER FOR TABLET/DESKTOP--*/
+.nav-ctr {
+    display: none;
+}
+
+/*--LOGO--*/
+.logo {
+    display: none;
+}
+
+/*--NAV ACTIONS CONTAINER--*/
+.nav-actions {
+    justify-self: right;
+    display: flex;
+    gap: 10px;
+}
+
+/*--ACTIONS BUTTONS & LINKS--*/
+.nav-actions li button {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    border: 2px solid var(--beige);
+    color: var(--beige);
+    background-color: var(--darkbrown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/*--BASKET BTN SPAN QUANTITY-----*/
+#basket-btn span {
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    border: 2px solid var(--beige);
+    color: var(--beige);
+    background: var(--darkbrown);
+}
+
+/*-----MENU BUTTON-----*/
+#menu-btn {
+    font-weight: 600;
+    align-items: baseline;
+    overflow: hidden;
+    transition: border 0.5s ease;
+}
+
+/*--MENU BUTTON OPEN JS--*/
+#menu-btn.open {
+    border: 2px solid var(--darkbrown);
+}
+
+/*--MENU TEXT CONTAINER--*/
+.menu-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease;
+    z-index: 1;
+}
+
+/*--MENU TEXT SPAN--*/
+.menu-txt span {
+    margin: 20px 0;
+}
+
+/*--MENU TEXT CONTAINER LAST SPAN--*/
+.menu-txt span:last-child {
+    color: var(--darkbrown);
+}
+
+/*--MENU TEXT JS--*/
+.menu-txt.open {
+    transform: translateY(-55px);
+}
+
+/*-----MENU-----*/
+.menu {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 85px;
+    right: 4%;
+}
+
+/*-MENU OPEN JS--*/
+.menu.open {
+    display: flex;
+}
+
+/*--MENU MAIN CONTAINER--*/
+.menu ul {
+    width: 250px;
+    padding: 10px;
+    border-radius: 15px;
+    display: grid;
+    gap: 10px;
+}
+
+/*--MENU LINKS--*/
+.menu ul li a {
+    padding: 20px;
+    border-radius: 15px;
+    font-weight: 700;
+    border: 2px solid var(--beige);
+    background-color: var(--darkbrown);
+    overflow: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease;
+}
+
+/*--MENU LINKS HOVER--*/
+.menu ul li a:hover {
+    border: 2px solid var(--darkbrown);
+    color: var(--brown);
+    background-color: var(--beige);
+}
+
+/*--ADD GAPS BETWEEN SECTIONS--*/
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+
+section {
+    margin: 0 30px;
+}
+
+/*--FOOTER WRAPPER--*/
+.footer-wrap {
+    margin-top: 150px;
+    padding: 30px;
+    color: var(--beige);
+    background-color: #0b0909;
+    position: relative;
+    z-index: 1;
+}
+
+/*--BIG FOOTER HEADING--*/
+.big-f-h {
+    text-align: center;
+    font-family: "Fraunces", serif;
+    font-variation-settings:
+        "SOFT" 100;
+    font-weight: 900;
+    font-size: 14vw;
+    color: var(--beige);
+}
+
+/*-----FOOTER-----*/
+footer {
+    font-family: "Fraunces", serif;
+    display: grid;
+    gap: 20px;
+}
+
+footer div h4 {
+    font-size: 1rem;
+}
+
+/*--FOOTER PARAGRAPH--*/
+footer p {
+    font-family: "Fraunces", serif;
+}
+
+/*--FOOTER CONTAINERS--*/
+.f-box {
+    padding: 30px;
+    border-radius: 15px;
+    background-color: var(--brown);
+    box-shadow: inset 0px -20px 50px #2d2617;
+}
+
+/*--FOOTER SVGS--*/
+.f-box svg {
+    height: 20px;
+    width: 20px;
+}
+
+/*-----FOOTER NAV-----*/
+.f-nav {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+/*--NAV LINK MAIN CONTAINER--*/
+.f-nav ul {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*--NAV LINK--*/
+.f-nav a {
+    font-weight: 700;
+    font-size: 1.8rem;
+    position: relative;
+}
+
+/*--NAV LINK BEFORE--*/
+.f-nav ul a::before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 30%;
+    right: 5px;
+    transform: rotateZ(180deg);
+    border-radius: 2px;
+    background-color: var(--beige);
+    transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
+}
+
+/*--NAV LINK BEFORE HOVER--*/
+.f-nav a:hover::before {
+    width: 12px;
+    height: 12px;
+    transform: rotateZ(0deg);
+}
+
+/*--SCROLL UP LINK--*/
+#up {
+    justify-self: end;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 15px;
+    border: 2px solid var(--beige);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/*-----FOOTER TIME-----*/
+.f-time {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*--TIME MAIN CONTAINER--*/
+.f-time ul {
+    flex: 1;
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+}
+
+/*--TIME MINI CONTAINER--*/
+.f-time ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/*--TIME LIST FIRST SPAN--*/
+.f-time ul li span:first-child {
+    font-weight: 500;
+}
+
+/*-----FOOTER ADDRESS-----*/
+.f-place {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+/*--FOOTER ADDRESS TEXT CONTAINER--*/
+.location {
+    display: grid;
+    gap: 30px;
+}
+
+/*--ADDRESS--*/
+.f-place address {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+}
+
+/*--ADDRESS PARAGRAPH--*/
+.f-place address p {
+    font-weight: 500;
+}
+
+/*--ADDRESS LINK--*/
+.f-place a {
+    align-self: end;
+    justify-self: end;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    border-radius: 15px;
+    border: 2px solid var(--beige);
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.5s ease;
+}
+
+/*--PHONE AND EMAIL LINK TEXT--*/
+.f-phone p,
+.f-mail p {
+    margin-top: 20px;
+}
+
+/*-----FOOTER NEWS-----*/
+.f-news {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*--FOOTER NEWS PARAGRAPH--*/
+.f-news p {
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/*--FOOTER NEWS FORM--*/
+.f-news form {
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+}
+
+/*--FOOTER INPUT PLACEHOLDER--*/
+.f-news form input::placeholder {
+    color: #958b76;
+}
+
+/*--FOOTER NEWS INPUT--*/
+.f-news form input {
+    border: none;
+    border-bottom: 3px solid var(--beige);
+    color: var(--beige);
+    padding: 10px;
+    background-color: transparent;
+}
+
+/*--FOOTER NEWS BUTTON--*/
+.f-news button {
+    align-self: flex-end;
+    justify-self: right;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-weight: 500;
+    border-radius: 15px;
+    border: 2px solid var(--beige);
+    color: var(--beige);
+    position: relative;
+    overflow: hidden;
+}
+
+/*--LINK'S SPAN & SVG--*/
+#up *,
+.f-place a *,
+.f-news button * {
+    z-index: 2;
+    transition: fill 0.5s ease, color 0.5s ease;
+}
+
+#up:hover *,
+.f-place a:hover *,
+.f-news button:hover * {
+    color: var(--brown);
+    fill: var(--brown);
+}
+
+
+/*--TRANSITION FOR BEFORE HOVER AND ACTIVE ELEMENTS--*/
+#menu-btn::before,
+#up::before,
+.f-place a::before,
+.f-news button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: -15px;
+    bottom: 0;
+    border-radius: 50px;
+    background-color: var(--beige);
+    z-index: 0;
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+#menu-btn.open::before,
+#up:hover::before,
+.f-place a:hover::before,
+.f-news button:hover::before {
+    width: 150%;
+    height: 100%;
+}
+
+/*-----FOOTER BOTTOM-----*/
+.f-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*--FOOTER SOCIALS--*/
+.f-bottom ul {
+    display: flex;
+    gap: 5px;
+}
+
+/*--SOCIALS SVGS--*/
+.f-bottom svg {
+    width: 40px;
+    height: 40px;
+}
+
+/*--COPYRIGHT--*/
+.copyright {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 900;
+    font-variation-settings:
+        "SOFT" 100;
+    text-transform: uppercase;
+    color: #958b76;
+}
+
+/*--OVERLAY--*/
+.overlay {
+    position: fixed;
+    z-index: 3;
+    inset: 0;
+    background-color: #00000055;
+}
+
+/*-----BASKET-----*/
+.basket {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    right: 0;
+    background-color: var(--beige);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    overflow: hidden;
+}
+
+/*--BASKET FONT--*/
+.basket * {
+    font-family: "Fraunces", sans-serif;
+}
+
+/*--BASKET OPEN JS--*/
+.basket.open {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+/*--BASKET TITLE--*/
+.basket-title {
+    padding: 20px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-bottom: 2px solid var(--darkbrown);
+    font-variation-settings:
+        "SOFT" 100;
+}
+
+/*--BASKET TITLE MINI CONTAINER--*/
+.basket-title>div {
+    display: flex;
+    flex-direction: column;
+}
+
+/*--BASKET HEADING--*/
+.basket-h {
+    color: var(--darkbrown);
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+/*--BASKET QUANTITY--*/
+.basket-qty {
+    padding: 2px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--beige);
+    background-color: var(--darkbrown);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/*--BASKET CLOSE BUTTON--*/
+#basket-close-btn {
+    width: 70px;
+    height: 70px;
+    border: 2px solid var(--darkbrown);
+    border-radius: 15px;
+    font-weight: 600;
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+/*--BASKET CLOSE BUTTON HOVER--*/
+#basket-close-btn:hover {
+    color: var(--beige);
+    background-color: var(--darkbrown);
+}
+
+/*--BASKET CONTENT--*/
+.basket-content {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow-y: auto;
+}
+
+/*--BASKET MESSAGE--*/
+.basket-msg {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*--BASKET MESSAGE PARAGRAPH--*/
+.basket-msg p {
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+/*--BASKET MESSAGE LINK--*/
+.basket-msg a {
+    padding: 15px;
+    font-weight: 900;
+    border-radius: 15px;
+    border: 2px solid var(--darkbrown);
+    color: var(--darkbrown);
+}
+
+/*--BASKET ITEM--*/
+.basket-item {
+    height: fit-content;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    font-variation-settings:
+        "SOFT" 100;
+}
+
+/*--BASKET ITEM IMAGE--*/
+.item-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+/*--BASKET ITEM NAME--*/
+.item-name {
+    font-weight: 900;
+}
+
+/*--BASKET ITEM PRICE--*/
+.item-price {
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+/*--BASKET ITEM QUANTITY--*/
+.item-quantity {
+    height: 50px;
+    width: fit-content;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid var(--darkbrown);
+    font-weight: 900;
+}
+
+/*--INHERIT THE CONTAINER's HEIGHT--*/
+.item-quantity button,
+.item-quantity input {
+    height: 100%;
+}
+
+/*--ADD BORDERS TO BUTTONS--*/
+.item-quantity .plus {
+    border-left: 2px solid var(--darkbrown);
+}
+
+.item-quantity .minus {
+    border-right: 2px solid var(--darkbrown);
+}
+
+/*--LABEL FOR QUANTITY NUMBER--*/
+.quantity-label {
+    /* I hide this so that it won't be visible to the user 
+    while being accessible to screen readers */
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+}
+
+/*--HIDES THE INPUT'S ARROW BUTTONS--*/
+.quantity-number::-webkit-inner-spin-button,
+.quantity-number::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+/*--RESETS INPUT'S STYLES--*/
+.quantity-number {
+    border: none;
+    width: 50px;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: transparent;
+    color: var(--darkbrown);
+}
+
+/*--BASKET REMOVE BUTTON--*/
+.remove-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    display: grid;
+    place-items: center;
+    background-color: var(--beige);
+    border: 2px solid var(--darkbrown);
+    border-radius: 0 15px 0 10px;
+}
+
+/*--BASKET REMOVE SVG--*/
+.remove-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/*--BASKET TOTAL--*/
+.basket-total {
+    padding: 30px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+    border-top: 2px solid var(--darkbrown);
+    font-variation-settings:
+        "SOFT" 100;
+}
+
+/*--TOTAL TITLE--*/
+.total-title {
+    color: var(--darkbrown);
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+/*--TOTAL PRICE--*/
+.total-price {
+    font-weight: 500;
+}
+
+/*--BASKET CHECKOUT BUTTON--*/
+.checkout {
+    grid-column: span 2;
+    margin-top: 20px;
+    padding: 20px;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    border-radius: 20px;
+    color: var(--beige);
+    background-color: var(--darkbrown);
+    text-transform: uppercase;
+}
+
+/*--BASKET NOTIFS CONTAINER--*/
+.basket-notifs {
+    display: grid;
+    max-height: 600px;
+    gap: 10px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 999;
+}
+
+/*--BASKET POPUP--*/
+.basket-popup {
+    width: 100%;
+    max-width: 250px;
+    padding: 30px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--beige);
+    border-radius: 15px;
+    border: 2px solid var(--beige);
+    color: var(--beige);
+    background-color: var(--darkbrown);
+    overflow: hidden;
+}
+
+/*-----ACCOUNT-----*/
+.account {
+    display: none;
+    height: fit-content;
+    max-width: 500px;
+    margin-inline: auto;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    top: 60px;
+    border-radius: 15px;
+    background-color: var(--beige);
+    overflow: hidden;
+}
+
+/*--ACCOUNT OPEN JS--*/
+.account.open {
+    display: grid;
+}
+
+/*--ACCOUNT FORM CONTAINER--*/
+.account-form-ctr {
+    padding: 30px 40px;
+}
+
+/*--ACCOUNT IMAGE--*/
+.account-img {
+    display: none;
+}
+
+/*--ACCOUNT LINKS--*/
+.account a {
+    display: inline;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-decoration: underline;
+    color: var(--brown);
+    transition: color 0.5s ease;
+}
+
+/*--LINKS HOVER--*/
+.account a:hover {
+    color: #958b76;
+}
+
+/*--ACCOUNT HEADINGS--*/
+.account-h {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/*--ACCOUNT H2--*/
+.account h2 {
+    color: var(--darkbrown);
+    font-size: 2rem;
+}
+
+/*--ACCOUNT H3--*/
+.account h3 {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+/*--INPUT CONTAINER--*/
+.account .input-ctr {
+    position: relative;
+    margin-top: 40px;
+}
+
+/*--LAST INPUT CONTAINER--*/
+.account .input-ctr:last-of-type {
+    margin-bottom: 20px;
+}
+
+/*--ACCOUNT LABEL--*/
+.account label {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    transition: transform 0.5s ease, font-size 0.5s ease;
+}
+
+/*--ACCOUNT INPUT--*/
+.account input {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid var(--brown);
+    background-color: transparent;
+}
+
+/*--WHEN USER IS TYPING OR HAS VALID DATA--*/
+.account input:focus+label,
+.account input:valid+label {
+    transform: translateY(-120%);
+    font-size: 0.8rem;
+}
+
+/*--SIGN IN BUTTON--*/
+.account form button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    font-weight: 600;
+    color: var(--beige);
+    border: 2px solid var(--beige);
+    background-color: var(--darkbrown);
+    transition: color 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+}
+
+.account form button:hover {
+    border: 2px solid var(--brown);
+    color: var(--brown);
+    background-color: var(--beige);
+}
+
+/*--ACCOUNT H4--*/
+.account h4 {
+    text-align: center;
+    margin-block: 20px;
+}
+
+/*--FORM OPTIONS--*/
+.form-opts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/*--FORM BUTTON--*/
+.form-opts button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid var(--darkbrown);
+    transition: border 0.5s ease;
+}
+
+/*--FORM BUTTON HOVER--*/
+.form-opts button:hover {
+    border: 2px solid #958b76;
+}
+
+/*--FORM BUTTON SPAN--*/
+.form-opts button span {
+    font-weight: 600;
+    flex: 1;
+}
+
+/*--FORM PARAGRAPH--*/
+.account p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.8rem;
+}
+
+.search {
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    display: none;
+    pointer-events: none;
+    color: var(--beige);
+}
+
+.search.open {
+    display: grid;
+    place-items: center;
+}
+
+.search form {
+    width: 250px;
+    padding: 40px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--darkbrown);
+    border-radius: 15px;
+    background-color: var(--beige);
+    pointer-events: auto;
+    position: relative;
+}
+
+.search label {
+    padding: 10px;
+    position: absolute;
+    left: 20px;
+    top: -40px;
+    border: 2px solid var(--beige);
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: "Fraunces", serif;
+    text-transform: uppercase;
+    background-color: var(--darkbrown);
+}
+
+.search input {
+    width: 100%;
+    margin-top: 10px;
+    outline: none;
+    border: 0px;
+    border-bottom: 2px solid var(--darkbrown);
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--darkbrown);
+    background-color: var(--beige);
+}
+
+@media (min-width: 375px) {
+    .search form {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .account {
+        top: 100px;
+    }
+}
+
+@media (min-width: 425px) {
+    section {
+        margin: 0 50px;
+    }
+
+    footer div {
+        font-size: 1.5rem;
+    }
+}
+
+/* Styles TABLETS */
+@media (min-width: 768px) {
+
+    /*-----ACCOUNT-----*/
+    .account {
+        max-width: 900px;
+        grid-template-columns: 0.8fr 1fr;
+    }
+
+    /*--ACCOUNT IMAGE--*/
+    .account-img {
+        display: block;
+        height: 620px;
+    }
+
+    /*--FOOTER WRAPPER--*/
+    .footer-wrap {
+        padding: 30px 20px;
+    }
+
+    /*-----FOOTER-----*/
+    footer {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas:
+            "nav time time"
+            "nav time time"
+            "nav phone phone"
+            "nav mail mail "
+            "news news place"
+            "last last last";
+        gap: 30px;
+    }
+
+    .f-nav {
+        grid-area: nav;
+    }
+
+    .f-time {
+        grid-area: time;
+    }
+
+    .f-place {
+        grid-area: place;
+    }
+
+    .f-phone {
+        grid-area: phone;
+    }
+
+    .f-mail {
+        grid-area: mail;
+    }
+
+    .f-news {
+        grid-area: news;
+    }
+
+    .f-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        grid-area: last;
+    }
+
+    /*--TIME MAIN CONTAINER--*/
+    .f-time ul {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /*--COPYRIGHT--*/
+    .copyright {
+        text-align: right;
+        grid-column: 3;
+    }
+}
+
+
+
+@media (min-width: 800px) {
+
+    /*--FOOTER WRAPPER--*/
+    .footer-wrap {
+        padding: 30px 50px;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    /*--MENU BUTTON CONTAINER--*/
+    .nav-actions li:last-child {
+        display: none;
+    }
+
+    /*-----NAV-----*/
+    nav {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 30px;
+    }
+
+    /*--LOGO--*/
+    .logo {
+        padding: 10px 20px;
+        border-radius: 15px;
+        border: 2px solid var(--beige);
+        background-color: var(--darkbrown);
+        font-size: 2rem;
+        font-weight: 900;
+        display: block;
+    }
+
+    /*--NAV CONTAINER--*/
+    .nav-ctr {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border: 2px solid var(--beige);
+        border-radius: 15px;
+        background-color: var(--darkbrown);
+        font-weight: 700;
+    }
+
+    /*--NAV MINI CONTAINER--*/
+    .nav-ctr li {
+        display: flex;
+        justify-content: center;
+    }
+
+    /*--NAV LINKS--*/
+    .nav-ctr li a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        position: relative;
+        transition: color 0.7s ease;
+    }
+
+    /*--NAV LINKS BEFORE--*/
+    .nav-ctr li a::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-radius: 10px;
+        background-color: var(--beige);
+        z-index: -1;
+        transition: width 0.5s ease, height 0.5s ease;
+    }
+
+    /*--NAV LINKS HOVER BEFORE--*/
+    .nav-ctr li a:hover::before {
+        width: 130%;
+        height: 60%;
+    }
+
+    .nav-ctr li a:hover {
+        color: var(--brown);
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr auto;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+            "nav time phone"
+            "nav time mail"
+            "nav news place"
+            "nav news place"
+            "last last last";
+    }
+}
+
+@keyframes menuOpen {
+    from {
+        opacity: 0;
+        padding: 0 20px;
+        transform: rotateX(90deg);
+    }
+
+    to {
+        opacity: 1;
+        padding: 20px;
+        transform: rotateX(0deg);
+    }
+}
+
+@keyframes menuClose {
+    from {
+        opacity: 1;
+        padding: 20px;
+    }
+
+    to {
+        border: 0px;
+        padding: 0 20px;
+        transform: rotateX(90deg);
+    }
+}
+
+@keyframes accountOpen {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes accountClose {
+    from {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
+@keyframes basketOpen {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes basketClose {
+    from {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes popDown {
+    0% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
