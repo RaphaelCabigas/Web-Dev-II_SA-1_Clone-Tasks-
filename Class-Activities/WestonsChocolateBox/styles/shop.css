@@ -1,0 +1,162 @@
+img {
+    aspect-ratio: 1 / 1;
+}
+
+main {
+    gap: 10px;
+}
+
+/*-----HERO-----*/
+.hero {
+    height: 70vh;
+    padding: 0 50px 60px 50px;
+    border-bottom-left-radius: 15.7vw;
+    border-bottom-right-radius: 15.7vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.288), rgba(0, 0, 0, 0.805)), url(../images/bg.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: var(--beige);
+}
+
+.hero h1 {
+    /* @link https://utopia.fyi/clamp/calculator?a=320,1440,48—210 */
+    font-size: clamp(3rem, -1.8571rem + 24.2857vw, 20rem);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main-shop {
+    display: grid;
+    gap: 15px;
+}
+
+.filter-ctr {
+    width: fit-content;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: var(--brown);
+}
+
+.filter-ctr * {
+    font-size: 1rem;
+    font-family: "Fraunces", serif;
+}
+
+.filter-ctr select {
+    padding: 10px;
+    border-radius: 15px 15px;
+    border: 2px solid var(--brown);
+    background-color: var(--beige);
+    cursor: pointer;
+}
+
+.shop-chocos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 70px;
+}
+
+.choco-box {
+    display: grid;
+    gap: 20px;
+}
+
+.choco-img {
+    border-radius: 20px;
+    height: 300px;
+    overflow: hidden;
+}
+
+/*---SHOP BOX DESCRIPTION--*/
+.choco-details {
+    color: var(--darkbrown);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.choco-buy {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+}
+
+.choco-quantity {
+    height: 100%;
+    min-height: 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 2px solid var(--darkbrown);
+    border-radius: 10px;
+    background-color: var(--beige);
+}
+
+.choco-quantity .quantity-number {
+    width: 100%;
+}
+
+.choco-quantity .minus {
+    border-right: 2px solid var(--darkbrown);
+}
+
+.choco-quantity .plus {
+    border-left: 2px solid var(--darkbrown);
+}
+
+.choco-add {
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 900;
+    background-color: var(--darkbrown);
+    color: var(--beige);
+}
+
+.choco-box h3 {
+    text-align: left;
+    font-size: 1.3rem;
+}
+
+.choco-box h4 {
+    text-align: left;
+    font-size: 1rem;
+}
+
+.pickmix {
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    text-align: center;
+}
+
+.pickmix h2 {
+    text-transform: uppercase;
+}
+
+.pickmix a {
+    padding: 30px;
+    border-radius: 15px;
+    background-color: var(--darkbrown);
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.pickmix a:hover {
+    transform: translate(-5%, -20%) skewX(-20deg);
+    box-shadow: 20px 20px var(--brown);
+}
+
+@media (min-width: 600px) {
+    .filter-ctr {
+        flex-direction: row;
+        align-items: center;
+    }
+}
