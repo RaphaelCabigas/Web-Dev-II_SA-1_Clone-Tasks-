@@ -1,0 +1,229 @@
+/*-----RESET SOME STANDARD TAGS-----*/
+section,
+main {
+    background-color: var(--black);
+}
+
+article {
+    background-color: transparent;
+}
+
+p {
+    color: var(--white);
+}
+
+button {
+    font-size: 1rem;
+    background-color: var(--black);
+}
+
+/* SET THE HOME LINK FIXED TOP RIGHT */
+a {
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    font-weight: 900;
+    font-family: "Major Mono Display", monospace;
+    color: var(--black);
+    background-color: var(--white);
+}
+
+header {
+    position: fixed;
+}
+
+h2 {
+    color: var(--white);
+}
+
+section {
+    z-index: 999;
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+/*--SCREEN BUTTONS--*/
+.screen-btn {
+    height: 100px;
+    width: 100px;
+    border: 2px solid var(--darkgray);
+    color: var(--white);
+    font-weight: 900;
+    font-family: "Major Mono Display", monospace;
+    text-transform: uppercase;
+}
+
+/*--START SCREEN--*/
+.starting-ctr {
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.starting-ctr p:first-of-type {
+    font-size: 1rem;
+    position: absolute;
+    bottom: 30px;
+}
+
+/*--START HEADING--*/
+.starting-ctr h1 {
+    transform: none;
+    text-shadow: -10px 10px var(--darkgray);
+    display: block;
+    font-size: clamp(3rem, 1rem + 10vw, 10rem);
+}
+
+/*--SCORE SCREEN--*/
+.score-ctr {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+/*--SCORE HEADING--*/
+.score-ctr h2 {
+    margin: 0;
+}
+
+/*--START & SCORE PARAGRAPH--*/
+.starting-ctr p,
+.score-ctr p {
+    font-weight: 900;
+    font-family: "Major Mono Display", monospace;
+    font-size: clamp(1rem, 1rem + 2vw, 3rem);
+}
+
+/*--START & SCORE CLOSE JS--*/
+.starting-ctr.close,
+.score-ctr.close {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*--NEXT QUESTION BUTTON--*/
+.next-btn {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 30px;
+    visibility: hidden;
+    color: var(--black);
+    background-color: var(--white);
+    font-weight: 900;
+    font-family: "Major Mono Display", monospace;
+    text-transform: uppercase;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/*--SCORE OPEN JS--*/
+.score-ctr.open,
+.next-btn.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*--QUESTION COUNTER--*/
+.question-number {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    position: fixed;
+}
+
+/*--COUNTER TEXT--*/
+.question-number p {
+    padding: 10px;
+    color: var(--black);
+    background-color: var(--white);
+}
+
+/*----QUESTION CONTAINER-----*/
+.question {
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    padding: 25px 20px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/*--QUIZ QUESTION--*/
+.question h2 {
+    align-self: end;
+    font-size: clamp(1.2rem, 1rem + 5vw, 2rem);
+    font-family: "Satoshi", sans-serif;
+    text-transform: none;
+    letter-spacing: -2px;
+}
+
+/*--QUESTION CLOSE JS--*/
+.question.close {
+    transform: scale(0.5) translateY(-30%) rotateZ(-30deg);
+    opacity: 0;
+}
+
+/*--CHOICES CONTAINER--*/
+.choices-ctr {
+    height: fit-content;
+    display: grid;
+    gap: 20px;
+}
+
+/*--CHOICE MINI CONTAINER--*/
+.choices-ctr li {
+    height: 100%;
+}
+
+/*--CHOICE BUTTON--*/
+.choice {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.5rem;
+    border: 2px solid var(--darkgray);
+    color: var(--white);
+    background-color: var(--darkgray);
+    text-align: left;
+    transition: background-color 0.3s ease, transform 0.5s ease;
+}
+
+/*--ENABLED CHOICE HOVER--*/
+.choice:enabled:hover {
+    background-color: rgb(20, 20, 20);
+}
+
+/*--CORRECT DESCRIPTION--*/
+.desc {
+    text-align: left;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease, margin-top 0.5s ease;
+}
+
+/*--CORRECT DESCRIPTION JS--*/
+.desc.open {
+    margin-top: 40px;
+    max-height: 150px;
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (min-width: 720px) {
+
+    /*-----QUESTION CONTAINER-----*/
+    .question {
+        padding-inline: 30px;
+    }
+
+    /*-----FLEXBOX QUIZ SECTION-----*/
+    .choices-ctr {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
