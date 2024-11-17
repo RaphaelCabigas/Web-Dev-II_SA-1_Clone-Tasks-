@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weston's Chocolate Box | Shop</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/shop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,100..900,0..100,0..1;1,9..144,100..900,0..100,0..1&family=Lexend:wght@100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-----SEARCH----->
+    <div class="search">
+        <form action="#">
+            <label for="search">Search</label>
+            <input type="search" name="search" id="search">
+        </form>
+    </div>
+    <!-----ACCOUNT----->
+    <div class="account">
+        <div class="account-form-ctr">
+            <!--ACCOUNT FORM-->
+            <form action="#">
+                <div class="account-h">
+                    <h2>Welcome back!</h2>
+                    <h3>Log in to your account</h3>
+                </div>
+                <div class="input-ctr">
+                    <input type="text" name="username" id="username" required>
+                    <label for="username">Username</label>
+                </div>
+                <div class="input-ctr">
+                    <input type="password" name="password" id="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <a href="#">Forgot Password?</a>
+                <button type="submit">Continue</button>
+            </form>
+            <h4>OR</h4>
+            <!--ACCOUNT FORM OPTIONS-->
+            <div class="form-opts">
+                <button><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0 0 48 48">
+                        <path fill="#fbc02d"
+                            d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12	s5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20	s20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z">
+                        </path>
+                        <path fill="#e53935"
+                            d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039	l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z">
+                        </path>
+                        <path fill="#4caf50"
+                            d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36	c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z">
+                        </path>
+                        <path fill="#1565c0"
+                            d="M43.611,20.083L43.595,20L42,20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z">
+                        </path>
+                    </svg><span>Continue with Google</span></button>
+                <button><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M 15.904297 1.078125 C 15.843359 1.06875 15.774219 1.0746094 15.699219 1.0996094 C 14.699219 1.2996094 13.600391 1.8996094 12.900391 2.5996094 C 12.300391 3.1996094 11.800781 4.1996094 11.800781 5.0996094 C 11.800781 5.2996094 11.999219 5.5 12.199219 5.5 C 13.299219 5.4 14.399609 4.7996094 15.099609 4.0996094 C 15.699609 3.2996094 16.199219 2.4 16.199219 1.5 C 16.199219 1.275 16.087109 1.10625 15.904297 1.078125 z M 16.199219 5.4003906 C 14.399219 5.4003906 13.600391 6.5 12.400391 6.5 C 11.100391 6.5 9.9003906 5.5 8.4003906 5.5 C 6.3003906 5.5 3.0996094 7.4996094 3.0996094 12.099609 C 2.9996094 16.299609 6.8 21 9 21 C 10.3 21 10.600391 20.199219 12.400391 20.199219 C 14.200391 20.199219 14.600391 21 15.900391 21 C 17.400391 21 18.500391 19.399609 19.400391 18.099609 C 19.800391 17.399609 20.100391 17.000391 20.400391 16.400391 C 20.600391 16.000391 20.4 15.600391 20 15.400391 C 17.4 14.100391 16.900781 9.9003906 19.800781 8.4003906 C 20.300781 8.1003906 20.4 7.4992188 20 7.1992188 C 18.9 6.1992187 17.299219 5.4003906 16.199219 5.4003906 z">
+                        </path>
+                    </svg><span>Continue with Apple</span></button>
+            </div>
+            <p>Want to create an account? <a href="#">Sign Up</a></p>
+        </div>
+        <!--ACCOUNT IMG-->
+        <div class="account-img">
+            <img src="./images/bg.jpg" alt="Shredded chocolates">
+        </div>
+    </div>
+    <!-----BASKET----->
+    <div class="basket">
+        <div class="basket-title">
+            <div>
+                <p class="basket-h">=Basket=</p>
+                <p class="basket-qty">0 item/s</p>
+            </div>
+            <button id="basket-close-btn">close</button>
+        </div>
+        <div class="basket-content">
+        </div>
+        <div class="basket-total">
+            <p class="total-title">Total</p>
+            <!--Price to be updated-->
+            <p class="total-price">0.00 AED</p>
+            <button type="submit" class="checkout">Checkout</button>
+        </div>
+    </div>
+    <div class="basket-notifs"></div>
+    <!-----MENU----->
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="#">Pick & Mix</a></li>
+            <li><a href="recipe.html">Recipes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <!-----NAVIGATION----->
+        <nav>
+            <a href="index.html" class="logo">WCB</a>
+            <!--NAVIGATION LINKS-->
+            <ul class="nav-ctr">
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#">Pick & Mix</a></li>
+                <li><a href="recipe.html">Recipes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <ul class="nav-actions">
+                <li>
+                    <!--SEARCH BUTTON-->
+                    <button id="search-btn" aria-label="Account Button">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                            viewBox="0 0 30 30" fill="#FFF0D1">
+                            <path
+                                d="M28.605 21.884c-.572-1.701-3.203-3.705-5.894-4.816-.241-.099-.511.014-.629.246-.519 1.014-1.192 1.956-2.02 2.785-.838.838-1.791 1.517-2.819 2.038-.233.118-.347.389-.248.63 1.146 2.776 3.239 5.467 4.852 5.874C26.345 29.777 29.893 25.717 28.605 21.884zM12.219 3.165000000000001A9.091 9.091 0 1012.219 21.347 9.091 9.091 0 1012.219 3.165000000000001z">
+                            </path>
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <!--ACCOUNT BUTTON-->
+                    <!--I used aria labels for buttons and links that might use an svg or image or the text itself is not visible to improve accessibility -->
+                    <button id="account-btn" aria-label="Account Button">
+                        <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" fill="#FFF0D1" clip-rule="evenodd"
+                                d="M50 95C74.8528 95 95 74.8528 95 50C95 25.1472 74.8528 5 50 5C25.1472 5 5 25.1472 5 50C5 74.8528 25.1472 95 50 95ZM35.1765 53.7059C38.3927 53.7059 41 51.0986 41 47.8824C41 44.6661 38.3927 42.0588 35.1765 42.0588C31.9602 42.0588 29.353 44.6661 29.353 47.8824C29.353 51.0986 31.9602 53.7059 35.1765 53.7059ZM69.5882 47.8824C69.5882 51.0986 66.9809 53.7059 63.7647 53.7059C60.5484 53.7059 57.9411 51.0986 57.9411 47.8824C57.9411 44.6661 60.5484 42.0588 63.7647 42.0588C66.9809 42.0588 69.5882 44.6661 69.5882 47.8824ZM49.4706 64.2941C45.5846 63.9952 43.1548 62.6836 41.144 61.5982C39.5936 60.7612 38.2923 60.0588 36.7648 60.0588C33.2561 60.0588 30.4118 62.9031 30.4118 66.4118C30.4118 69.9204 35.1765 73.8235 43.1177 75.9412C43.9415 76.0219 44.7209 76.0902 45.4579 76.1465C46.5187 76.3026 47.8758 76.3759 49.5832 76.3497C51.372 76.3768 52.7785 76.2974 53.8639 76.13C54.5281 76.077 55.2265 76.0142 55.9605 75.9412C63.9016 73.8235 68.6663 69.9204 68.6663 66.4118C68.6663 62.9031 65.822 60.0588 62.3134 60.0588C60.7845 60.0588 59.4563 60.7625 57.8747 61.6004C55.8268 62.6854 53.354 63.9954 49.4706 64.2941Z"
+                                fill="black" />
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <!--BASKET BUTTON-->
+                    <button id="basket-btn" aria-label="Basket Button">
+                        <span>0</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 110" height="100"
+                            width="100">
+                            <path fill="#FFF0D1" fill-rule="evenodd"
+                                d="M42.12414285714286 6.172157142857143c2.5089285714285716 1.568057142857143 3.271642857142857 4.8732 1.7035714285714285 7.382128571428572L29.97721428571429 35.715h40.04378571428572L56.17057142857143 13.554285714285715c-1.5680714285714288 -2.5089285714285716 -0.8053571428571429 -5.814071428571428 1.7035714285714285 -7.382128571428572 2.5089285714285716 -1.5680928571428572 5.814 -0.8053785714285715 7.382142857142858 1.7035571428571428l17.399428571428572 27.839285714285715h3.0571428571428574c5.890000000000001 0 10.804285714285715 4.815500000000001 10.470714285714287 10.903357142857143 -0.4842857142857143 8.830785714285716 -1.7792857142857144 22.693357142857145 -4.618571428571428 34.92592857142858 -1.5735714285714286 6.781428571428572 -6.687857142857143 12.240714285714287 -13.950714285714287 13.294285714285715 -6.005000000000001 0.8714285714285714 -14.98207142857143 1.590714285714286 -27.6155 1.590714285714286 -12.633500000000002 0 -21.610857142857146 -0.7192857142857143 -27.61564285714286 -1.590714285714286 -7.262642857142858 -1.0535714285714286 -12.377 -6.512857142857143 -13.950785714285715 -13.294285714285715C5.593342857142857 69.31171428571429 4.2984857142857145 55.44914285714286 3.8142000000000005 46.61835714285715c-0.33385714285714285 -6.087857142857143 4.5803 -10.903357142857143 10.470300000000002 -10.903357142857143h3.0579285714285716l17.39957142857143 -27.839285714285715c1.5680714285714288 -2.5089357142857143 4.873142857142857 -3.27165 7.382142857142858 -1.7035571428571428Z"
+                                clip-rule="evenodd" stroke-width="1"></path>
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <!--MENU BUTTON-->
+                    <button id="menu-btn" aria-label="Menu Button">
+                        <div class="menu-txt">
+                            <span>menu</span>
+                            <span>close</span>
+                        </div>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-----HERO----->
+        <section class="hero">
+            <h1>Shop</h1>
+        </section>
+        <section class="main-shop">
+            <div class="filter-ctr">
+                <label for="filter">Filter by</label>
+                <select name="filter" id="filter">
+                    <!--A way for a user to select an ‘occasion’ and begin building from there-->
+                    <option value="">All</option>
+                    <option value="westons">Westons</option>
+                    <option value="christmas">Christmas</option>
+                    <option value="easter">Easter</option>
+                    <option value="valentines">Valentines</option>
+                </select>
+                <label for="sort">Sort by</label>
+                <select name="sort" id="sort">
+                    <option value="high">Price: High to Low</option>
+                    <option value="low">Price: Low to High</option>
+                </select>
+            </div>
+            <div class="shop-chocos"></div>
+        </section>
+        <section class="pickmix">
+            <h2>Want to create your own custom chocolate box?</h2>
+            <a href="pickmix.html"><span>Make</span><span> My</span><span> Box</span></a>
+        </section>
+    </main>
+    <div class="footer-wrap">
+        <div class="big-f-h">WESTON'S</div>
+        <footer>
+            <div class="f-nav f-box">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="#">Pick & Mix</a></li>
+                    <li><a href="recipe.html">Recipes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="#" id="up"><span>up</span><svg height="100" width="100" version="1.1" id="Capa_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 35.367 35.367" xml:space="preserve">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <g>
+                                <path fill="#FFF0D1"
+                                    d="M31.295,11.955L20.511,1.172c-1.562-1.562-4.095-1.562-5.657,0L4.071,11.955 c-1.562,1.562-1.301,2.828,0.583,2.828s3.412,1.791,3.412,4v12.583c0,2.209,1.791,4,4,4H23.3c2.209,0,4-1.791,4-4V18.783 c0-2.209,1.527-4,3.412-4C32.597,14.783,32.857,13.517,31.295,11.955z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg></a>
+            </div>
+            <div class="f-time f-box">
+                <h4>Opening Hours</h4>
+                <ul>
+                    <li>
+                        <span>Monday-Wednesday:</span>
+                        <span>
+                            <time datetime="PT9H">9 AM</time>-<time datetime="PT18H">6 PM</time>
+                        </span>
+                    </li>
+                    <li>
+                        <span>Thursday-Friday:</span>
+                        <span>
+                            <time datetime="PT12H">12 NN</time>-<time datetime="PT22H">10 PM</time>
+                        </span>
+                    </li>
+                    <li>
+                        <span>Saturday:</span>
+                        <span>
+                            <time datetime="PT10H">10 AM</time>-<time datetime="PT17H">5 PM</time>
+                        </span>
+                    </li>
+                    <li>
+                        <span>Sunday:</span>
+                        <span>Closed</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="f-place f-box">
+                <h4>Location</h4>
+                <div class="location">
+                    <address>
+                        <p>45 Eastgate Street</p>
+                        <p>Chester, CH1 1LG</p>
+                    </address>
+                    <a href="https://maps.app.goo.gl/ZhP3j9RKpV8inp398" target="_blank"><span>map</span><svg width="100"
+                            height="100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <g id="style=fill">
+                                <g id="location">
+                                    <path id="Subtract" fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M8.89129 21.0787L8.9461 21.1315L8.95039 21.1357C9.95462 22.098 10.9283 22.7576 12.0296 22.7449C13.1259 22.7323 14.0956 22.0555 15.0992 21.0783C16.4747 19.7455 18.2545 17.9477 19.5403 15.8149C20.831 13.6741 21.6639 11.1292 21.0372 8.33595C18.9197 -1.10413 5.09133 -1.11519 2.96276 8.32592C2.35382 11.04 3.12314 13.5227 4.34999 15.6268C5.57222 17.7231 7.2824 19.5029 8.65394 20.8471C8.73386 20.9254 8.81273 21.0023 8.89035 21.0778L8.89129 21.0787ZM12 6.25012C10.2051 6.25012 8.75 7.7052 8.75 9.50012C8.75 11.295 10.2051 12.7501 12 12.7501C13.7949 12.7501 15.25 11.295 15.25 9.50012C15.25 7.7052 13.7949 6.25012 12 6.25012Z"
+                                        fill="#FFF0D1" />
+                                </g>
+                            </g>
+                        </svg></a>
+                </div>
+            </div>
+            <a href="tel:+12345678910" class="f-phone f-box">
+                <h4>Phone</h4>
+                <p>+123 456 78910</p>
+            </a>
+            <a href="mailto:westons@choco.box" class="f-mail f-box">
+                <h4>Email</h4>
+                <p>westons@choco.box</p>
+            </a>
+            <div class="f-news f-box">
+                <h4>Newsletter</h4>
+                <p>Subscribe to receive exclusive chocolate box offers and updates</p>
+                <form action="#">
+                    <label for="email" style="display: none;">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <button type="submit"><span>sign up</span><svg viewBox="0 0 24 24" fill="none" width="100"
+                            height="100" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18.61 2.64548C20.1948 2.19021 21.6568 3.65224 21.2016 5.23705L17.1785 19.2417C16.5079 21.5761 13.3904 22.0197 12.1096 19.9629L10.3338 17.1113C9.84262 16.3226 9.96155 15.2974 10.6207 14.6383L14.4111 10.8479C14.8022 10.4567 14.8033 9.82357 14.4134 9.43373C14.0236 9.04389 13.3905 9.04497 12.9993 9.43614L9.20901 13.2265C8.54987 13.8856 7.52471 14.0046 6.73596 13.5134L3.88412 11.7375C1.82737 10.4567 2.27092 7.33918 4.60532 6.66858L18.61 2.64548Z"
+                                    fill="#FFF0D1"></path>
+                            </g>
+                        </svg></button>
+                </form>
+            </div>
+            <div class="f-bottom">
+                <ul>
+                    <li><a href="http://twitter.com" aria-label="Weston's Chocolate Box Twitter"><svg
+                                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0,0,256,256">
+                                <g fill="#fff0d1" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                    font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                    <g transform="scale(8,8)">
+                                        <path
+                                            d="M16.00391,4.00586c-2.92375,0 -5.84891,0.3432 -8.75391,1.0332c-1.09,0.26 -1.95094,1.12094 -2.21094,2.21094c-1.38,5.81 -1.38,11.69 0,17.5c0.26,1.09 1.12094,1.96094 2.21094,2.21094c2.9,0.69 5.83,1.03906 8.75,1.03906c2.92,0 5.85,-0.34906 8.75,-1.03906c1.09,-0.26 1.95094,-1.12094 2.21094,-2.21094c1.38,-5.81 1.38,-11.69 0,-17.5c-0.25,-1.09 -1.12094,-1.95094 -2.21094,-2.21094c-2.9,-0.69 -5.82234,-1.0332 -8.74609,-1.0332zM10,11.06055h4c0.3,0 0.58,0.13914 0.75,0.36914c0.56,0.75 1.32969,1.67086 2.17969,2.63086c0.83,-0.83 1.60031,-1.70063 2.32031,-2.64062c0.32,-0.41 0.92008,-0.47992 1.33008,-0.16992c0.41,0.32 0.47992,0.92008 0.16992,1.33008c-0.79,1.01 -1.62906,1.95914 -2.53906,2.86914c1.5,1.58 3.09953,3.05023 4.26953,3.74023c0.37,0.22 0.53969,0.65055 0.42969,1.06055c-0.11,0.41 -0.49016,0.68945 -0.91016,0.68945h-5c-0.23,0 -0.45086,-0.08023 -0.63086,-0.24023c-0.79,-0.69 -1.43977,-1.31992 -2.00977,-1.91992c-0.83,0.62 -1.73984,1.27 -2.83984,2c-0.16,0.11 -0.33953,0.16016 -0.51953,0.16016c-0.3,0 -0.5993,-0.13992 -0.7793,-0.41992c-0.29,-0.43 -0.18023,-1.00883 0.25977,-1.29883c1.01,-0.68 1.85914,-1.26984 2.61914,-1.83984c-0.58,-0.69 -1.11898,-1.38063 -1.70898,-2.14063c-0.61,-0.78 -1.28133,-1.63062 -2.11133,-2.64062c-0.24,-0.28 -0.28891,-0.67 -0.12891,-1c0.15,-0.33 0.47961,-0.53906 0.84961,-0.53906zM11.98047,12.93945c0.32,0.4 0.60867,0.78063 0.88867,1.14063c1.35,1.73 2.43023,3.12047 4.49023,4.98047h1.86133c-2.13,-1.89 -4.43141,-4.51109 -5.69141,-6.12109z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg></a></li>
+                    <li><a href="http://facebook.com" aria-label="Weston's Chocolate Box Facebook"> <svg
+                                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0,0,256,256">
+                                <g fill="#fff0d1" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                    font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                    <g transform="scale(8,8)">
+                                        <path
+                                            d="M26.961,7.249c-0.257,-1.086 -1.124,-1.953 -2.209,-2.21c-5.809,-1.379 -11.696,-1.379 -17.503,0c-1.086,0.257 -1.953,1.124 -2.21,2.209c-1.379,5.808 -1.379,11.696 0,17.503c0.257,1.086 1.124,1.953 2.209,2.21c2.904,0.689 5.828,1.034 8.752,1.034c2.924,0 5.848,-0.345 8.752,-1.034c1.085,-0.257 1.952,-1.124 2.209,-2.209c1.379,-5.808 1.379,-11.696 0,-17.503zM15.227,25.524c-0.15,-1.613 -0.206,-3.392 -0.12,-4.797c-0.92,0 -1.797,-0.114 -2.519,-0.382c-0.153,-0.057 -0.28,-0.184 -0.348,-0.332c-0.514,-1.121 -0.514,-1.903 0,-3.023c0.069,-0.149 0.204,-0.277 0.358,-0.334c0.902,-0.333 1.696,-0.405 2.521,-0.405l0.041,-0.928c0.188,-3.382 2.607,-5.744 6.314,-5.822c0.23,-0.005 0.457,0.125 0.554,0.334c0.48,1.039 0.51,2.249 0.011,3.318c-0.099,0.209 -0.319,0.347 -0.55,0.347c-1.104,0 -2.005,0.904 -2.002,2.008l0.002,0.73c1.308,0.01 2.038,0.114 3.071,0.38c0.252,0.065 0.448,0.334 0.449,0.594c0.005,1.059 -0.328,2.245 -0.97,2.93c-0.086,0.054 -0.169,0.107 -0.254,0.161c-0.636,0.221 -1.217,0.289 -2.216,0.289c0.074,1.259 0.003,3.09 -0.136,4.802c-0.02,0.245 -0.216,0.441 -0.461,0.461c-1.081,0.091 -2.163,0.133 -3.245,0.124c-0.259,-0.002 -0.477,-0.198 -0.5,-0.455z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg></a></li>
+                    <li><a href="http://instagram.com" aria-label="Weston's Chocolate Box Instagram"> <svg
+                                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0,0,256,256">
+                                <g fill="#fff0d1" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                    font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                    <g transform="scale(8,8)">
+                                        <path
+                                            d="M16.00391,4.00586c-2.92375,0 -5.84891,0.3432 -8.75391,1.0332c-1.09,0.26 -1.95094,1.12094 -2.21094,2.21094c-1.38,5.81 -1.38,11.69 0,17.5c0.26,1.09 1.12094,1.96094 2.21094,2.21094c2.9,0.69 5.83,1.03906 8.75,1.03906c2.92,0 5.85,-0.34906 8.75,-1.03906c1.09,-0.26 1.95094,-1.12094 2.21094,-2.21094c1.38,-5.81 1.38,-11.69 0,-17.5c-0.25,-1.09 -1.12094,-1.95094 -2.21094,-2.21094c-2.9,-0.69 -5.82234,-1.0332 -8.74609,-1.0332zM22.5,8c0.83,0 1.5,0.67 1.5,1.5c0,0.83 -0.67,1.5 -1.5,1.5c-0.83,0 -1.5,-0.67 -1.5,-1.5c0,-0.83 0.67,-1.5 1.5,-1.5zM16,10c3.31,0 6,2.69 6,6c0,3.31 -2.69,6 -6,6c-3.31,0 -6,-2.69 -6,-6c0,-3.31 2.69,-6 6,-6zM16,12c-2.20914,0 -4,1.79086 -4,4c0,2.20914 1.79086,4 4,4c2.20914,0 4,-1.79086 4,-4c0,-2.20914 -1.79086,-4 -4,-4z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg></a></li>
+                    <li><a href="http://tiktok.com" aria-label="Weston's Chocolate Box Tiktok"> <svg
+                                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                viewBox="0,0,256,256">
+                                <g fill="#fff0d1" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                    font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                    <g transform="scale(8,8)">
+                                        <path
+                                            d="M26.96,7.25c-0.25,-1.09 -1.12,-1.95 -2.21,-2.21c-5.8,-1.38 -11.69,-1.38 -17.5,0c-1.09,0.26 -1.95,1.12 -2.21,2.21c-1.38,5.81 -1.38,11.69 0,17.5c0.26,1.09 1.12,1.96 2.21,2.21c2.9,0.69 5.83,1.04 8.75,1.04c2.92,0 5.85,-0.35 8.75,-1.04c1.09,-0.26 1.95,-1.12 2.21,-2.21c1.38,-5.81 1.38,-11.69 0,-17.5zM20.97,14.5v0c-1.1,-0.02 -2.12,-0.39 -2.93,-1.02v6.02c0,2.21 -1.8,4 -4,4c-2.2,0 -4,-1.79 -4,-4c0,-2.21 1.79,-4 4,-4c0.55,0 1,0.45 1,1c0,0.55 -0.45,1 -1,1c-1.1,0 -2,0.9 -2,2c0,1.1 0.9,2 2,2c1.1,0 2,-0.9 2,-2v-10c0,-0.55 0.45,-1 1,-1c0.55,0 1,0.45 1,1c0,1.63 1.32,2.98 2.96,3c0.55,0.01 0.99,0.46 0.98,1.01c0,0.55 -0.45,0.99 -1,0.99z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg></a></li>
+                </ul>
+                <p class="copyright">&copy; 2024 Made & Designed by Raphael Cabigas</p>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="./scripts/basket.js"></script>
+<script src="./scripts/shop.js"></script>
+<script src="./scripts/script.js"></script>
+
+</html>
