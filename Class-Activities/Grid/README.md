@@ -18,6 +18,10 @@ Create a product page layout using CSS Grid. Include a product image, title, pri
 ### 5. Grid Quiz
 Design a quiz layout similar to the Flexbox quiz task, but this time use CSS Grid. The questions should be in one grid area, while answer choices should be distributed in a grid below.
 
-## Demo 
+## Grid Showcase 
 
-![Grid Tasks Demo](link)
+![Grid Tasks Demo](./assets/images/grid.gif)
+
+## Website Resources &copy;
+* Images: Pexels & superdesigner.co
+* Fluid Typography: UTOPIA
