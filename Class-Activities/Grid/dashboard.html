@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface Dashboard</title>
+    <link rel="stylesheet" href="./styles/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-----Menu Sidebar----->
+    <aside class="menu">
+        <ul>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Notifications</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </aside>
+    <!-----Header----->
+    <header>
+        <h1>Dashboard</h1>
+        <button id="menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256">
+                <g fill="#fff5e0" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                    stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                    font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                    style="mix-blend-mode: normal">
+                    <g transform="scale(3.55556,3.55556)">
+                        <path
+                            d="M56,48c2.209,0 4,1.791 4,4c0,2.209 -1.791,4 -4,4c-1.202,0 -38.798,0 -40,0c-2.209,0 -4,-1.791 -4,-4c0,-2.209 1.791,-4 4,-4c1.202,0 38.798,0 40,0zM56,32c2.209,0 4,1.791 4,4c0,2.209 -1.791,4 -4,4c-1.202,0 -38.798,0 -40,0c-2.209,0 -4,-1.791 -4,-4c0,-2.209 1.791,-4 4,-4c1.202,0 38.798,0 40,0zM56,16c2.209,0 4,1.791 4,4c0,2.209 -1.791,4 -4,4c-1.202,0 -38.798,0 -40,0c-2.209,0 -4,-1.791 -4,-4c0,-2.209 1.791,-4 4,-4c1.202,0 38.798,0 40,0z">
+                        </path>
+                    </g>
+                </g>
+            </svg></button>
+        </ul>
+    </header>
+    <!-----Dashboard Widgets----->
+    <main>
+        <section class="activity">
+            <div class="widget-top">
+                <h2>Study Activity</h2>
+                <select name="" class="">
+                    <option value="">Week</option>
+                    <option value="">Month</option>
+                </select>
+            </div>
+            <div class="activity-bars">
+                <div class="time-act">
+                    <h3>Sun</h3>
+                    <div class="progress-bar bar-1"></div>
+                </div>
+                <div class="time-act">
+                    <h3>Mon</h3>
+                    <div class="progress-bar bar-2"></div>
+                </div>
+                <div class="time-act">
+                    <h3>Tue</h3>
+                    <div class="progress-bar bar-3"></div>
+                </div>
+                <div class="time-act">
+                    <h3>Wed</h3>
+                    <div class="progress-bar bar-4"></div>
+                </div>
+                <div class="time-act">
+                    <h3>Thu</h3>
+                    <div class="progress-bar bar-5"></div>
+                </div>
+                <div class="time-act">
+                    <h3>Fri</h3>
+                    <div class="progress-bar bar-6"></div>
+                </div>
+                <div class="time-act">
+                    <h3>Sat</h3>
+                    <div class="progress-bar bar-7"></div>
+                </div>
+            </div>
+        </section>
+        <section class="notifications">
+            <div class="widget-top">
+                <h2>Notifications</h2>
+                <a href="">View All</a>
+            </div>
+            <div class="notifs-wrapper">
+                <ul class="notifications-container">
+                    <li>New Message from Tutor Rafia</li>
+                    <li>School Announcement</li>
+                    <li>New Message from Tutor Mary</li>
+                    <li>Web Development Assessment 1 Deadline on Nov 14</li>
+                    <li>Code Lab II resources updated</li>
+                </ul>
+            </div>
+        </section>
+        <section class="statistics">
+            <div class="widget-top">
+                <h2>Progress Statistics</h2>
+                <div class="statistics-btns">
+                    <button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#1b1919"
+                            viewBox="0 0 256 256">
+                            <path
+                                d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z">
+                            </path>
+                        </svg></button>
+                    <button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#1b1919"
+                            viewBox="0 0 256 256">
+                            <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="statistics-container">
+                <div class="statistics-details">
+                    <div class="details-container">
+                        <h3>Upcoming</h3>
+                    </div>
+                    <div class="details-container">
+                        <h3>In progress</h3>
+                    </div>
+                    <div class="details-container">
+                        <h3>Completed</h3>
+                    </div>
+                </div>
+                <div class="pie">
+                    <div class="upcoming">
+                    </div>
+                    <div class="completed">
+                    </div>
+                    <div class="in-progress">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="./scripts/dashboard.js"></script>
+
+</html>
