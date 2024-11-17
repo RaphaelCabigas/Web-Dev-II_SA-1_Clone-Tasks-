@@ -1,0 +1,194 @@
+/* Adds the fonts from the assets folder */
+@font-face {
+    /* Initializes the font name for the custom font you want to access*/
+    font-family: "LTInstitute";
+    /* Specifies the font's location*/
+    src: url(../assets/fonts/LTInstitute/LTInstitute-1.otf);
+}
+
+/* When a font name of Subjectivity reaches a 
+specified font-weight and style it will use the corresponding font*/
+@font-face {
+    font-family: 'Subjectivity';
+    src: url(../assets/fonts/Subjectivity/Subjectivity-Regular.woff2);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Subjectivity';
+    src: url(../assets/fonts/Subjectivity/Subjectivity-Bold.woff2);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Subjectivity';
+    src: url(../assets/fonts/Subjectivity/Subjectivity-BoldSlanted.woff2);
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Subjectivity';
+    src: url(../assets/fonts/Subjectivity/Subjectivity-ExtraBold.woff2);
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Subjectivity';
+    src: url(../assets/fonts/Subjectivity/Subjectivity-ExtraBoldSlanted.woff2);
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Subjectivity';
+    src: url(../assets/fonts/Subjectivity/Subjectivity-Super.woff2);
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Subjectivity';
+    src: url(../assets/fonts/Subjectivity/Subjectivity-SuperSlanted.woff2);
+    font-weight: 900;
+    font-style: italic;
+}
+
+/*-----CSS RESET: resets default spacing values-----*/
+* {
+    margin: 0;
+    padding: 0;
+    /* Width and height takes account of border and padding spacing*/
+    box-sizing: border-box;
+}
+
+/*-----VALUES TO BE USED STORED IN VARIABLES USING THE ROOT OF THE HTML-----*/
+:root {
+    --lightgray: #BFCBA8;
+    --darkbluegreen: #56776C;
+    --darkgray: #464F41;
+}
+
+/* Styles scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--lightgray);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--darkbluegreen);
+}
+
+body {
+    /* 1.5: A number value that will multiply by the element's font-size*/
+    line-height: 1.5;
+    background-color: var(--lightgray);
+    max-width: 1600px;
+    margin-inline: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    /* Sets images to block and width to 100% which takes up the whole container*/
+    width: 100%;
+    height: 100%;
+    /* Makes the image not stretch in the container but fill it properly
+  however some parts of the image may not be visible */
+    object-fit: cover;
+    display: block;
+}
+
+a {
+    font-family: 'LTInstitute', sans-serif;
+    display: block;
+    /* Removes underline from the anchor tags */
+    text-decoration: none;
+}
+
+ul {
+    /* Removes bullet points from the unordered list */
+    list-style-type: none;
+}
+
+button {
+    /* Removes the border */
+    border: none;
+    cursor: pointer;
+    font-family: 'LTInstitute', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Subjectivity', sans-serif;
+}
+
+h1 {
+    line-height: 100%;
+    font-weight: 900;
+    /* Adds a line stroke to the text */
+    -webkit-text-stroke: 5px var(--darkgray);
+    /* @link https://utopia.fyi/clamp/calculator?a=320,1440,96—300 */
+    font-size: clamp(6rem, 2.3571rem + 18.2143vw, 18.75rem);
+    /* Sets display to flex since I put span tags for Flex and Box */
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-weight: 800;
+    font-style: italic;
+    /* @link https://utopia.fyi/clamp/calculator?a=320,1440,25—90 */
+    font-size: clamp(1.5625rem, -0.1339rem + 8.4821vw, 7.5rem);
+    text-transform: uppercase;
+}
+
+h3 {
+    /* @link https://utopia.fyi/clamp/calculator?a=320,1440,20—60 */
+    font-weight: 700;
+    font-size: clamp(1.25rem, 0.5357rem + 3.5714vw, 3.75rem);
+}
+
+h4 {
+    /* @link https://utopia.fyi/clamp/calculator?a=320,1440,15—60 */
+    font-size: clamp(1.25rem, 0.5357rem + 3.5714vw, 3.75rem);
+}
+
+p {
+    letter-spacing: 0.5px;
+    /* @link https://utopia.fyi/clamp/calculator?a=320,1440,16—20 */
+    font-size: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
+    /* If the words overflow out of the container it will move the letter on the next line*/
+    overflow-wrap: break-word;
+    font-family: 'LTInstitute', sans-serif;
+}
+
+main {
+    background-color: var(--lightgray);
+}
+
+section {
+    padding: 30px 20px;
+}
+
+/*Styles TABLETS*/
+@media (min-width: 720px) {
+    section {
+        padding: 30px 50px;
+    }
+}
