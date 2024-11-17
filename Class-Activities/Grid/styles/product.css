@@ -1,0 +1,392 @@
+/* Adds the fonts through the assets folder */
+@font-face {
+    font-family: "Chillax";
+    src: url(../assets/fonts/Chillax/Chillax-Regular.woff2), format('woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Chillax";
+    src: url(../assets/fonts/Chillax/Chillax-Medium.woff2), format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Chillax";
+    src: url(../assets/fonts/Chillax/Chillax-Bold.woff2), format('woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Patriot";
+    src: url(../assets/fonts/Patriot/Patriot-Light.woff2), format('woff2');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Patriot";
+    src: url(../assets/fonts/Patriot/Patriot-Normal.woff2), format('woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Patriot";
+    src: url(../assets/fonts/Patriot/Patriot-Medium.woff2), format('woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Patriot";
+    src: url(../assets/fonts/Patriot/Patriot-Bold.woff2), format('woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Patriot";
+    src: url(../assets/fonts/Patriot/Patriot-UltraBold.woff2), format('woff2');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "Patriot";
+    src: url(../assets/fonts/Patriot/Patriot-Black.woff2), format('woff2');
+    font-weight: 900;
+}
+
+/*-----CSS RESET: resets default spacing values-----*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-----VALUES TO BE USED STORED IN VARIABLES USING THE ROOT OF THE HTML-----*/
+:root {
+    --yellow: #ffd243;
+    --red: #e20d0f;
+}
+
+/* Styles scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--yellow);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+}
+
+body {
+    padding: 15px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 15px;
+    background-color: var(--yellow);
+    line-height: 1.5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    aspect-ratio: 2 / 1;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    display: block;
+}
+
+svg {
+    width: 40px;
+}
+
+a {
+    width: fit-content;
+    display: block;
+    text-decoration: none;
+    color: var(--yellow);
+    font-weight: 900;
+    font-family: "Chillax", sans-serif;
+}
+
+ol,
+ul {
+    list-style-type: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: "Patriot", sans-serif;
+    background-color: transparent;
+    font-weight: 900;
+    color: var(--yellow);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--yellow);
+    font-family: "Patriot", sans-serif;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+p {
+    font-family: "Chillax", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    /* @link https://utopia.fyi/clamp/calculator?a=320,1440,16—20 */
+    font-size: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
+    /* If the words overflow out of the container it will move it on the next line*/
+    overflow-wrap: break-word;
+    color: var(--yellow);
+}
+
+header {
+    height: fit-content;
+    padding-inline: 20px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 15px;
+    background-color: var(--red);
+}
+
+.logo {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Patriot", sans-serif;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.menu,
+.navigation {
+    display: none;
+}
+
+.menu {
+    width: 200px;
+    padding-inline: 30px;
+    gap: 10px;
+    position: absolute;
+    top: 180px;
+    right: 16px;
+    z-index: 1;
+    background-color: var(--red);
+    border-radius: 0 0 25px 25px;
+    overflow: hidden;
+}
+
+.menu.open {
+    display: grid;
+}
+
+@keyframes menuOpen {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 200px;
+    }
+}
+
+@keyframes menuClose {
+    0% {
+        height: 200px;
+    }
+
+    100% {
+        height: 0;
+    }
+}
+
+.nav-actions {
+    justify-self: right;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+header,
+section {
+    border-radius: 10px;
+    background-color: var(--red);
+}
+
+section {
+    padding: 15px;
+}
+
+main {
+    display: grid;
+    gap: 15px;
+}
+
+.img-ctr {
+    padding: 0;
+    display: grid;
+    background: transparent;
+    position: relative;
+    z-index: -1;
+}
+
+.img-ctr div>h2 {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.img-move {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+.img-move button {
+    padding: 6px;
+    font-weight: 900;
+    font-size: 2rem;
+    border-radius: 10px;
+    background-color: var(--red);
+}
+
+.img-wrap button {
+    padding: 6px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-weight: 900;
+    font-size: 3rem;
+    border-radius: 15px;
+    background-color: var(--red);
+}
+
+.details-ctr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.details-ctr h3 {
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+@media (min-width: 720px) {
+    img {
+        aspect-ratio: 3;
+    }
+
+    header {
+        grid-template-columns: auto 1fr;
+    }
+
+    .nav-actions {
+        justify-self: right;
+    }
+}
+
+@media (min-width: 1000px) {
+    .nav-actions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        gap: 50px;
+    }
+
+    .navigation {
+        justify-self: right;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        gap: 50px;
+    }
+
+    .navigation li {
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+
+    .navigation a {
+        display: grid;
+        place-items: center;
+        position: relative;
+    }
+
+    .navigation a::before {
+        content: "";
+        position: absolute;
+        top: -60px;
+        height: 0;
+        width: 0;
+        border-radius: 0 0 15px 15px;
+        background-color: var(--yellow);
+        transition: height 0.5s cubic-bezier(0.215, 0.610, 0.355, 1), width 0.6s ease;
+    }
+
+    .navigation a:hover::before {
+        height: 50px;
+        width: 60px;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    .nav-actions>li:last-child {
+        display: none;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr 1fr auto;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+            "img img desc desc"
+            "img img desc desc"
+            "img img desc desc"
+            "img img desc desc"
+            "img img dets dets";
+    }
+
+    .desc-ctr {
+        grid-area: desc;
+    }
+
+    .img-ctr {
+        grid-area: img;
+    }
+
+    .details-ctr {
+        grid-area: dets;
+    }
+}
