@@ -1,0 +1,180 @@
+/*-----VALUES TO BE USED STORED IN VARIABLES USING THE ROOT OF THE HTML-----*/
+:root {
+    --green: #19454B;
+    --yellow: #E5B958;
+    --red: #b51f1f;
+    --black: #1C1C1C;
+    --white: #e4e4e4;
+}
+
+main {
+    min-height: 100vh;
+    /* !important to override the styles */
+    background-color: var(--green) !important;
+}
+
+a {
+    padding: 15px;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    border-radius: 15px;
+    color: var(--black);
+    background-color: var(--yellow);
+    text-transform: uppercase;
+}
+
+/*--LOGO--*/
+.logo {
+    height: 250px;
+    width: 250px;
+}
+
+/*--LOGO CONTAINER--*/
+.logo-ctr {
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*--LOGO HEADING--*/
+.logo-ctr h1 {
+    margin-top: 40px;
+    text-align: center;
+    color: var(--yellow);
+    -webkit-text-stroke: 0;
+    font-size: clamp(3rem, 1rem + 10vw, 3rem);
+}
+
+.logo-ctr p {
+    color: var(--white);
+}
+
+/*--FORM--*/
+form {
+    height: 70px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+/*--INPUT--*/
+form input {
+    /* Allocate the remaining form's space */
+    flex: 1;
+    padding-inline: 20px;
+    font-family: "LTInstitute", sans-serif;
+}
+
+/*--ADD BUTTON--*/
+form button {
+    /* Allocate a 1/2 of the form's space */
+    flex: 0.5;
+    color: var(--black);
+    background-color: var(--yellow);
+    text-transform: uppercase;
+}
+
+.todo {
+    padding: 15px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    background-color: var(--white);
+}
+
+.remove-btn {
+    padding: 15px;
+    border-radius: 15px;
+    color: var(--white);
+    background-color: var(--red);
+}
+
+.warning {
+    padding: 15px;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    color: var(--black);
+    background-color: var(--white);
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.warning.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Styles TABLETS */
+@media (min-width: 720px) {
+    main {
+        display: flex;
+    }
+
+    /*--EQUALLY SPACE SECTIONS--*/
+    section {
+        flex: 1;
+    }
+
+    /*--LOGO CONTAINER--*/
+    .logo-ctr {
+        display: flex;
+        justify-content: center;
+    }
+
+    .list {
+        flex: 2;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .list-ctr {
+        padding-block: 15px;
+        height: 85%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .list-ctr::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .list-ctr::-webkit-scrollbar-thumb {
+        background-color: var(--yellow);
+    }
+
+    .list-ctr::-webkit-scrollbar-track {
+        background-color: var(--green);
+    }
+}
+
+@keyframes removeTodoAni {
+    from {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes addTodoAni {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
