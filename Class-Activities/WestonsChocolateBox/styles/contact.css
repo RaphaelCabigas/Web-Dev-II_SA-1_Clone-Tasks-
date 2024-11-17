@@ -1,0 +1,119 @@
+main {
+    display: grid;
+    color: var(--beige);
+    background-color: var(--darkbrown);
+    gap: 0;
+}
+
+section {
+    margin-inline: 20px;
+    display: flex;
+    padding-top: 120px;
+    flex-direction: column;
+}
+
+section>p {
+    max-width: 600px;
+    margin-top: 30px;
+    font-size: 1.2rem;
+}
+
+form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+form label {
+    display: none;
+}
+
+form input,
+textarea {
+    width: 100%;
+    padding: 40px;
+    border: 2px solid var(--beige);
+    border-radius: 10px;
+    /* @link https://utopia.fyi/clamp/calculator?a=320,1440,16—50 */
+    font-size: clamp(1rem, 0.3929rem + 3.0357vw, 3.125rem);
+    color: var(--beige);
+    background-color: var(--darkbrown);
+}
+
+textarea {
+    height: 500px;
+    resize: vertical;
+    font-family: "Lexend", sans-serif;
+}
+
+form button {
+    margin-bottom: 50px;
+    padding: 30px;
+    color: var(--darkbrown);
+    background-color: var(--beige);
+    border-radius: 15px;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+
+/*-----ASIDE-----*/
+aside {
+    height: 100%;
+    margin-inline: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+aside p {
+    margin-top: 10px;
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: "Fraunces", serif;
+}
+
+.asd-details,
+.asd-socials {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: var(--brown);
+}
+
+.asd-socials svg {
+    height: 60px;
+    width: 60px;
+}
+
+.asd-socials ul {
+    margin-top: 10px;
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+@media (min-width: 1000px) {
+    main {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        gap: 40px;
+    }
+
+    section {
+        margin: 0;
+        padding-right: 50px;
+        overflow-y: auto;
+    }
+
+    aside {
+        order: -1;
+    }
+
+}
