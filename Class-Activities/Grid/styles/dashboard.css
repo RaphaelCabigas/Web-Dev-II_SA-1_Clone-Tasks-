@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+/*-----VALUES TO BE USED-----*/
+:root {
+    --dirtywhite: #FFF5E0;
+    --gray: #c2bebe;
+    --yellowg: #A7D129;
+    --green: #616F39;
+    --black: #1B1919;
+}
+
+/*-----CSS RESET-----*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Afacad Flux", sans-serif;
+}
+
+::-webkit-scrollbar {
+    height: 5px;
+    width: 10px;
+    background-color: var(--gray);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background-color: var(--black);
+}
+
+
+body {
+    padding: 15px;
+    gap: 15px;
+    display: grid;
+    background-color: var(--gray);
+    line-height: 1.5;
+    position: relative;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    object-fit: cover;
+    display: block;
+    max-width: 100%;
+}
+
+p,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--black);
+}
+
+p {
+    /* @link https://utopia.fyi/clamp/calculator?a=320,1440,16—20 */
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+}
+
+a {
+    color: var(--black);
+    display: block;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    display: grid;
+    place-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+aside {
+    overflow: hidden;
+}
+
+#menu-btn {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    transition: background-color 0.5s ease;
+}
+
+#menu-btn:hover {
+    background-color: #262626;
+}
+
+.menu {
+    max-width: 200px;
+    position: fixed;
+    bottom: 100px;
+    right: 15px;
+    border-radius: 15px;
+    display: grid;
+    background-color: var(--black);
+    z-index: 2;
+}
+
+.menu ul {
+    display: grid;
+}
+
+.menu ul li a {
+    display: grid;
+    padding: 0 20px;
+    align-items: center;
+    height: 60px;
+    color: var(--dirtywhite);
+    transition: background-color 0.5s ease;
+}
+
+.menu ul li a:hover {
+    background-color: #262626;
+}
+
+
+/*-----HEADER-----*/
+header {
+    position: sticky;
+    width: 100%;
+    bottom: 15px;
+    border-radius: 15px;
+    padding: 15px 30px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    color: var(--dirtywhite);
+    background-color: var(--black);
+    z-index: 2;
+    order: 1;
+}
+
+button img {
+    height: 100%;
+}
+
+main {
+    display: grid;
+    gap: 15px;
+}
+
+section {
+    padding: 25px;
+    background-color: var(--dirtywhite);
+    border-radius: 15px;
+}
+
+.widget-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.activity {
+    height: 500px;
+}
+
+.activity-bars {
+    margin-top: 15px;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    height: 90%;
+    gap: 10px;
+}
+
+.activity-bars h3 {
+    height: 100%;
+    width: 100%;
+    text-align: right;
+    display: grid;
+    align-items: center;
+    position: absolute;
+}
+
+.time-act {
+    position: relative;
+}
+
+.progress-bar {
+    border-radius: 0 15px 15px 0;
+    height: 100%;
+    background-color: var(--yellowg);
+}
+
+.bar-1 {
+    width: 20%;
+}
+
+.bar-2 {
+    width: 65%;
+}
+
+.bar-3 {
+    width: 70%;
+}
+
+.bar-4 {
+    width: 10%;
+}
+
+.bar-5 {
+    width: 40%;
+}
+
+.bar-6 {
+    width: 90%;
+}
+
+.bar-7 {
+    width: 60%;
+}
+
+.notifications {
+    padding-inline: 0;
+    overflow: hidden;
+}
+
+.widget-top a,
+.widget-top button {
+    align-self: baseline;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--black);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.widget-top button {
+    height: 35px;
+    width: 35px;
+}
+
+svg {
+    transition: fill 0.5s ease;
+}
+
+.widget-top button:hover svg {
+    fill: var(--dirtywhite);
+}
+
+.widget-top a:hover,
+.widget-top button:hover {
+    color: var(--dirtywhite);
+    background-color: var(--black);
+}
+
+
+select {
+    font-size: 1rem;
+    font-weight: 600;
+    border: 1px solid var(--black);
+    background-color: var(--dirtywhite);
+    text-indent: 10px;
+    border-radius: 10px;
+    width: 100px;
+}
+
+.notifications .widget-top {
+    padding-inline: 20px;
+}
+
+.notifs-wrapper {
+    padding-inline: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.notifs-wrapper::-webkit-scrollbar-thumb,
+.notifs-wrapper::-webkit-scrollbar {
+    visibility: hidden;
+}
+
+.notifications-container {
+    height: 80%;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.notifications-container li {
+    text-wrap: balance;
+    width: 300px;
+    height: 120px;
+    padding: 0 15px;
+    display: grid;
+    align-items: center;
+    border-radius: 15px;
+    color: var(--dirtywhite);
+    background-color: var(--green);
+}
+
+.statistics-container {
+    margin-top: 15px;
+    display: grid;
+    gap: 15px;
+    grid-template-rows: auto auto;
+}
+
+.statistics-btns {
+    justify-self: right;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.statistics-details {
+    align-self: end;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    z-index: 1;
+}
+
+.details-container {
+    border-radius: 15px;
+    display: flex;
+}
+
+.details-container::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-block: auto;
+    display: block;
+}
+
+.details-container:nth-of-type(1)::before {
+    background-color: var(--black);
+}
+
+.details-container:nth-of-type(2)::before {
+    background-color: var(--green);
+}
+
+.details-container:nth-of-type(3)::before {
+    background-color: var(--yellowg);
+}
+
+.pie {
+    justify-self: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    overflow: hidden;
+}
+
+.upcoming {
+    background-color: var(--black);
+}
+
+.completed {
+    background-color: var(--yellowg);
+}
+
+.in-progress {
+    grid-column: span 2;
+    grid-row: span 2;
+    background-color: var(--green);
+}
+
+@media (min-width: 500px) {
+    .statistics-container {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        gap: 0px;
+    }
+
+    .statistics-details {
+        grid-template-columns: auto;
+    }
+
+    .pie {
+        justify-self: right;
+        height: 250px;
+        width: 250px;
+    }
+}
+
+@media (min-width: 1000px) {
+    body {
+        grid-template-rows: repeat(2, 1fr);
+        height: 100vh;
+    }
+
+    header {
+        position: static;
+    }
+
+    main {
+        grid-row: span 2;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .activity {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        grid-column: span 7;
+        grid-row: span 3;
+    }
+
+    .activity-bars h3 {
+        order: 1;
+        text-align: center;
+        position: static;
+    }
+
+    .activity-bars {
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .bar-1 {
+        height: 20%;
+    }
+
+    .bar-2 {
+        height: 65%;
+    }
+
+    .bar-3 {
+        height: 70%;
+    }
+
+    .bar-4 {
+        height: 10%;
+    }
+
+    .bar-5 {
+        height: 40%;
+    }
+
+    .bar-6 {
+        height: 90%;
+    }
+
+    .bar-7 {
+        height: 60%;
+    }
+
+    .time-act {
+        display: grid;
+        grid-template-rows: 1fr;
+        align-items: end;
+    }
+
+    .progress-bar {
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .statistics {
+        grid-row: span 2;
+        display: grid;
+    }
+
+    .notifications,
+    .statistics {
+        grid-column: span 5;
+    }
+}
+
+@media (min-width: 2000px) {
+    body {
+        margin: 100px auto;
+        max-width: 1440px;
+        max-height: 1000px;
+    }
+}
+
+@keyframes menuOpen {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes menuClose {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
