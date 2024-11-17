@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body>
+    <!--MENU BUTTON-->
+    <button class="menu-btn">
+        <span class="menu-txt">
+            <span>menu</span>
+            <span>close</span>
+        </span>
+    </button>
+    <!-----MENU----->
+    <nav class="menu">
+        <ul>
+            <li><a href="#grid-layout">Grid Layout</a></li>
+            <li><a href="#photo-grid">Photo Grid</a></li>
+            <li><a href="quiz.html">Grid Quiz</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="product.html">Product Page</a></li>
+        </ul>
+    </nav>
+    <!-----HEADER----->
+    <header>
+        <!-----NAVIGATION----->
+        <nav class="nav-ctr">
+            <!--NAVIGATION LINKS-->
+            <ul>
+                <li><a href="#grid-layout">Grid Layout</a></li>
+                <li><a href="#photo-grid">Photo Grid</a></li>
+                <li><a href="quiz.html">Grid Quiz</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="product.html">Product Page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-----HERO----->
+        <section class="hero">
+            <h1><span>Gr</span><span>id</span></h1>
+            <p>Showcasing a bunch of web development tasks that uses grid layouts such as a photo grid,
+                grid questions,
+                a dashboard interface, and a product page.
+            </p>
+        </section>
+        <!-----GRID LAYOUT----->
+        <section id="grid-layout">
+            <aside>
+                <div>
+                    <img src="./assets/images/cube_3d_shape.png" alt="3D Cube">
+                    <h2>
+                        <span>What Is </span>
+                        <span>Grid</span>
+                    </h2>
+                </div>
+            </aside>
+            <article>
+                <p>Over the years, there have been many methods to solve this layout, but with CSS
+                    grid, not only is it relatively straightforward, but you have lots of options.
+                </p>
+                <p>Grid is exceptionally useful at combining
+                    the control that extrinsic sizing provides with the flexibility of intrinsic sizing, which makes it
+                    ideal for this sort of layout. This is because grid is a layout method designed for two-dimensional
+                    content. That is, laying things out in rows and columns at the same time.</p>
+                <p>When creating a grid layout you define a grid with rows and columns. Then you place items onto that
+                    grid, or allow the browser to auto-place them into the cells you have created. There's a lot to
+                    grid, but with an overview of what is available you'll be making grid layouts in no time.
+                </p>
+                <a href="https://web.dev/learn/css/grid/">CSS Grid by web.dev</a>
+            </article>
+        </section>
+        <!-----PHOTO GRID----->
+        <section id="photo-grid">
+            <!-----PHOTO H2 CONTAINER----->
+            <div class="photo-h2">
+                <h2>Photo Grid</h2>
+            </div>
+            <!--loading attribute set to lazy so that it will only load when it reaches the user's viewport screen allowing the page to load faster-->
+            <!--I haven't really seen the difference yet cuz it only runs locally so yeah-->
+            <img loading="lazy" src="./assets/images/gall-1.jpg" alt="Kuwait Water Towers">
+            <img loading="lazy" src="./assets/images/gall-2.jpg" alt="A Low Angle Photography of Gray Spiral Building">
+            <img loading="lazy" src="./assets/images/gall-3.jpg" alt="A Room with Square Lights">
+            <img loading="lazy" src="./assets/images/gall-4.jpg"
+                alt="A Futuristic Modern Building with Unusual Details">
+            <img loading="lazy" src="./assets/images/gall-5.jpg"
+                alt="Picturesque Scenery of Blooming Sakura Growing near Tall Broadcasting Tower under Blue Sky">
+        </section>
+        <!-----EXTRA----->
+        <section id="extra">
+            <a href="quiz.html"><img class="extra-img" src="./assets/images/gridquiz.jpg" alt="Grid Quiz">
+                <span>Grid Quiz</span></a>
+            <a href="dashboard.html"><img class="extra-img" src="./assets/images/dashboard.jpg"
+                    alt="Interface Dashboard">
+                <span>Dashboard</span></a>
+            <a href="product.html"><img class="extra-img" src="./assets/images/product.jpg" alt="Product Page">
+                <span>Product Page</span></a>
+        </section>
+    </main>
+    <!-----FOOTER----->
+    <footer>
+        <!-----COPYRIGHT----->
+        <p class="copyright">&copy; 2024 made & designed by Raphael Cabigas</p>
+        <!-----GO UP TAG----->
+        <a href="#">Go up</a>
+    </footer>
+</body>
+<script src="./scripts/script.js"></script>
+
+</html>
