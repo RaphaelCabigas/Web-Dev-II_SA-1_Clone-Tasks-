@@ -1,0 +1,365 @@
+/*-----HERO-----*/
+.hero {
+    height: 94vh;
+    padding: 0 50px 60px 50px;
+    border-bottom-left-radius: 15.7vw;
+    border-bottom-right-radius: 15.7vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.288), rgba(0, 0, 0, 0.805)), url(../images/bg.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: var(--beige);
+}
+
+/*--HERO P--*/
+.hero p {
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/*--CONTENT H--*/
+.content-h {
+    margin-bottom: 10px;
+}
+
+.content-h>span {
+    font-family: "Fraunces", serif;
+    font-variation-settings:
+        "SOFT" 100;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.content-h h2>span {
+    font-style: italic;
+}
+
+/*-----ABOUT-----*/
+.about {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 30px;
+}
+
+/*--ABOUT TEXT--*/
+.about-txt {
+    order: -1;
+}
+
+/*--ABOUT IMG--*/
+.about-img {
+    height: 700px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+/*-----INGREDIENTS-----*/
+.ing-ctr {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    color: var(--beige);
+}
+
+/*--ING BOX CONTAINER--*/
+.ing-box {
+    height: 500px;
+    border: 2px solid var(--brown);
+    background-color: #382c2c;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+/*--ING DESCRIPTION CONTAINER--*/
+.ing-desc {
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+/*--ING HEADING--*/
+.ing-desc h3 {
+    font-size: 2.5rem;
+}
+
+/*--ING PARAGRAPH--*/
+.ing-desc p {
+    font-size: 1.3rem;
+}
+
+/*--ING SVG--*/
+.ing-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotateZ(30deg);
+    display: grid;
+    place-items: center;
+    z-index: 0;
+}
+
+/*--ING 2ND SVG--*/
+.ing-box:nth-child(2) .ing-svg {
+    transform: scale(0.75) rotateZ(40deg);
+}
+
+/*--ING 3RD SVG--*/
+.ing-box:nth-child(3) .ing-svg {
+    transform: rotateZ(30deg);
+}
+
+/*-----SHOP-----*/
+.shop {
+    margin: 0;
+    position: relative;
+}
+
+/*---SHOP CONTENT H--*/
+.shop .content-h {
+    margin: 0 20px;
+}
+
+/*---SHOP BACKGROUND--*/
+.shop-bg {
+    margin-top: 50px;
+    background: linear-gradient(rgba(0, 0, 0, 0.288), rgba(0, 0, 0, 0.805)), url(../images/bg.jpg);
+    position: relative;
+    overflow: hidden;
+}
+
+/*---SHOP CHOCOLATES--*/
+.shop-chocos {
+    display: flex;
+    gap: 50px;
+    padding: 50px;
+    padding-bottom: 100px;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+/*---SHOP LINK--*/
+.shop a {
+    border-radius: 50px 50px 0 0;
+    padding: 30px;
+    font-weight: 900;
+    border: 2px solid;
+    border-bottom: 0;
+    font-style: italic;
+    background-color: var(--darkbrown);
+    position: absolute;
+    right: 50px;
+    bottom: 8px;
+}
+
+/*---SHOP BOX--*/
+.choco-box {
+    border-radius: 15px;
+    background-color: var(--darkbrown);
+}
+
+/*---SHOP BOX IMAGE--*/
+.choco-img {
+    width: 400px;
+    height: 400px;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+}
+
+/*---SHOP BOX DESCRIPTION--*/
+.choco-details {
+    padding: 25px;
+    color: var(--beige);
+    background-color: var(--darkbrown);
+    border-radius: 0 0 15px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+/*---BOX DESCIPTION NAME--*/
+.choco-name {
+    font-size: 1.3rem;
+}
+
+/*---BOX DESCIPTION PRICE--*/
+.choco-price {
+    font-size: 1rem;
+}
+
+/*---BOX OPTIONS--*/
+.choco-buy {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*--BOX QUANTITY CONTAINER--*/
+.choco-quantity {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--beige);
+}
+
+/*--INHERIT THE CONTAINER's HEIGHT--*/
+.choco-quantity button,
+.choco-quantity input {
+    height: 100%;
+}
+
+/*--ADD BORDERS TO BUTTONS--*/
+.choco-quantity .plus {
+    border-left: 2px solid var(--darkbrown);
+}
+
+.choco-quantity .minus {
+    border-right: 2px solid var(--darkbrown);
+}
+
+/*--ADD TO BASKET BUTTON--*/
+.choco-add {
+    padding-inline: 30px;
+    border-radius: 10px;
+    border: 2px solid var(--beige);
+    color: var(--beige);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/*-----FEATURED-----*/
+.featured {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 60px;
+}
+
+/*--FEATURED HEADING--*/
+.featured .content-h {
+    text-align: right;
+}
+
+/*--FEATURED TEXT--*/
+.featured-txt {
+
+    text-align: right;
+    order: 1;
+}
+
+/*--FEATURED LINK--*/
+.featured a {
+    width: fit-content;
+    margin-top: 40px;
+    margin-left: auto;
+    padding: 30px;
+    font-size: 2rem;
+    border-radius: 50px 0;
+    background-color: var(--darkbrown);
+    color: var(--beige);
+}
+
+/*--FEATURED IMAGE CONTAINER--*/
+.featured-img-ctr {
+    position: relative;
+}
+
+/*--FEATURED IMAGE--*/
+.featured-img {
+    height: 600px;
+    overflow: hidden;
+    border-radius: 100px;
+}
+
+/*--FEATURED HEADING 3--*/
+.featured-img-ctr h3 {
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 15px 0;
+    background-color: var(--beige);
+    font-variation-settings:
+        "SOFT" 100;
+}
+
+@media (min-width: 375px) {
+    .shop .content-h {
+        margin: 0 50px;
+    }
+}
+
+@media (min-width: 900px) {
+
+    .about,
+    .featured {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 0;
+    }
+
+    .about {
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .featured {
+        grid-template-rows: 0.8fr 1fr;
+    }
+
+    .about-img,
+    .featured-img-ctr {
+        grid-row: span 2;
+    }
+
+    .about-img {
+        order: -2;
+    }
+
+    .about .content-h,
+    .featured .content-h {
+        align-self: end;
+    }
+
+    .featured .featured-txt {
+        align-self: start;
+    }
+
+    .shop-bg {
+        border-radius: 100px 0 0 100px;
+        margin-left: 60px;
+    }
+
+    .newsletter {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .newsletter form {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-img {
+        max-height: 400px;
+        display: block;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 1000px) {
+    .hero {
+        align-items: center;
+    }
+}
